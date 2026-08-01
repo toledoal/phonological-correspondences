@@ -336,6 +336,38 @@ pairs and you have counted the whole repertoire — mechanically, with no recons
 **Reproduce.** `make family FAMILY="Indo-European"` runs steps 1–4 and writes the correspondence table;
 `make cognate-eval` runs the validation against IE-CoR.
 
+### 5.1 Cognacy without reconstruction — why the method is built this way
+
+A comparative linguist will raise a sharp objection, and it deserves a straight answer: *a correspondence is
+only meaningful between cognates — forms descended from one ancestor — so aligning same-meaning forms that may
+not be cognate yields noise, not correspondences.* Everything in this book turns on how we answer it.
+
+The answer is that **the evidence that two forms are cognate has always been the regularity of their
+correspondences** — that their sounds line up the same way across many words. The reconstructed ancestor is an
+*inference built on top of* that regularity; it is not the evidence itself. This method keeps the evidence and
+suspends the inference: it detects cognacy by **recurrent, systematic correspondence** (that is what LexStat
+measures), which is exactly the Neogrammarian criterion — and it declines to posit a reconstructed protoform.
+We do not abandon comparative rigour; we keep its foundation and set aside only its final, reconstructive step.
+
+This is not "anything goes." A cluster earns its place by *showing* recurrent correspondence; a meaning-matched
+set with no such regularity — unrelated words for 'fire', say — fails **our own** criterion, not merely the
+reconstructionist's. So when we prefer one worked example over another, it is because one exhibits a legible,
+recurrent correspondence and the other does not — never because a reconstruction certifies it.
+
+Why not simply filter the input down to expert-certified cognates and be safe? Because that would defeat the
+experiment. If we cleaned the data *with* reconstruction and then asked whether the resulting structure matches
+historical regularities, we would be testing history against a history-filtered dataset — the answer leaking into
+the inputs. Withholding reconstruction from the *input* is precisely what lets the later comparison with
+reconstruction be an *independent* test (this is the whole point of Chapter 3).
+
+Finally, the residual risk — that statistical clustering still groups the occasional look-alike — is not assumed
+away; it is **measured**. Chapter 17 permutes concept labels to destroy all cognacy and meaning (the $D_R$
+control) and reports what survives; the two-level validation there shows that although pair-by-pair cognacy is
+noisy (precision $\approx0.73$ against expert judgments), the operator *inventory* is far more robust
+($\approx1.0$). Contamination is a controlled variable, not a hidden flaw. That is the shield: we keep the
+comparative method's foundation, set aside only its reconstructive conclusion, and let explicit controls say how
+much the residue matters.
+
 ## 6. The operator $\Delta(a,b)$
 
 **The question.** What, precisely, is an "operator" in this book — and what is it *not*?
@@ -568,12 +600,12 @@ reconstruction.
 **The question.** IE uses 67 of $\sim$4095 generable operators — 1.6%. Are phonological systems really that
 restrictive?
 
-**Worked example — 'fire'.** One word already shows the logic. Indo-European 'fire' across seven languages —
-Bulgarian `ogən`, Romanian `fok`, Serbo-Croatian `vatra`, Seychelles Creole `dife`, Albanian `zjarⁿ`, Eastern
-Armenian `kˀrakˀ`, Western Armenian `grag` — contributes only a handful of operators, among them our atom `{voi}`
-(from Armenian `kˀ~g`, *kˀrakˀ* vs *grag*). Each word adds a few operators; pooled over the whole vocabulary they
-converge on just **67** distinct types. Sixty-seven out of an algebraic 4095 sounds like almost nothing — until
-you ask the right denominator (below).
+**Worked example — 'three'.** Take the forms the method groups for 'three' by recurrent correspondence
+(§5.1) — Bulgarian `tri`, Romanian `trei`, Ancient Greek `treis`, Breton `tri`, Yiddish `draj`. They align
+cleanly, and the clearest consonant correspondence is `t~d` between `tri` and `draj` — our atom `{voi}`. Each
+meaning contributes a few such operators; pooled over the whole vocabulary they converge on just **67** distinct
+types. Sixty-seven out of an algebraic 4095 sounds like almost nothing — until you ask the right denominator
+(below).
 
 **The intuition.** No — and this is one of the most important corrections in the book. The 1.6% compares the
 repertoire to the full *algebraic* span, most of which consists of feature-bundles that could never be a
@@ -694,13 +726,14 @@ notation. (Part V returns to this comparison.)
 **The question.** We said the repertoire uses little of its span. *Which* generable operators are missing,
 and how far are they from what is present?
 
-**Worked example — 'star'.** Indo-European 'star' (Bulgarian `zvezda`, Ancient Greek `aster`, Serbo-Croatian
-`zvezda`, Albanian `ül`, Judeo-Tat `astara`) yields the correspondences `s~z` = `{voi}`, `r~l` = `{hi+lo}`, and
-`v~s` = `{cor+lab+voi}`, all of which are *observed* operators. Now ask about a nearby operator the family could
-generate but this word did not use — say `{voi+strid}` (voicing plus stridency together, as in a bare `z~s`
-without the extra place features). If `{voi}` is present and `{strid}` is present but `{voi+strid}` is not, that
-missing combination is a **hole at distance 1**: available in the corpus's opportunities, one feature away from
-what is attested, yet unchosen. Cataloguing exactly these near-misses is the geometry below.
+**Worked example — 'mother'.** Take the forms the method groups for 'mother' — Serbo-Croatian `mati`, Spanish
+`madre`, Armenian `majr`, Lower Sorbian `muterka`. Their medial consonant lines up recurrently: `mati`'s `t`
+against `madre`'s `ð` gives `t~ð` = `{cont+voi}`, an *observed* operator (voicing alone, `t~d` = `{voi}`, and
+continuancy alone, `{cont}`, are observed elsewhere in the family). Now ask about a nearby operator the family
+*could* generate but does not use here — say `{cont+voi+strid}` (a `t~z`, adding stridency to the `t~ð` bundle).
+If `{cont+voi}` is present and `{strid}` is present but `{cont+voi+strid}` is not, that missing combination is a
+**hole at distance 1**: available in the corpus's opportunities, one feature away from what is attested, yet
+unchosen. Cataloguing exactly these near-misses is the geometry below.
 
 **The code and the holes.** Treat $\langle O\rangle$ as a binary linear code. *(A linear code is simply a set
 closed under XOR — here, every operator the observed ones can generate. The point of borrowing the term is that
@@ -815,12 +848,13 @@ look.
 **The question.** Is the "algebra of Indo-European" a single thing, or the superposition of several branch
 algebras dominated by whichever branches are best sampled?
 
-**Worked example — 'fire', within a branch vs across.** Inside the *Armenic* branch, Eastern `kˀrakˀ` and
-Western `grag` differ by a single clean operator, `kˀ~g` = `{voi}` — a tidy, intra-branch correspondence. Across
-*different* branches, 'fire' barely aligns at all: Bulgarian `ogən` (Slavic), Romanian `fok` (Romance),
-Albanian `zjarⁿ` share almost no material. So the intuition "branches share their own operators" seems obvious.
-The surprise (below) is that, *measured against a proper null*, it is only true for Austronesian — not for
-Indo-European.
+**Worked example — 'two', within a branch vs across.** Take the forms for 'two'. Inside the *Armenic* branch,
+Eastern `jerkˀu` and Western `jergu` differ by a single clean operator, `kˀ~g` = `{voi}` — a tidy, intra-branch
+correspondence. Across *different* branches the forms still line up by a recurrent initial correspondence —
+Romanian `doi`, Serbo-Croatian `dva`, Ancient Greek `duo` all share a `d`-initial — so the intuition "related
+branches share structure" seems obvious. The surprise (below) is that, *measured against a proper null*, that
+overlap is no greater than among random language groupings in Indo-European — whereas in Austronesian the
+branches are genuinely more differentiated than chance.
 
 **The clean decomposition.** Partition each family into its genealogical branches (Glottolog, cut where
 clades reach a manageable size), run the whole pipeline *within* each branch, and take the family repertoire as

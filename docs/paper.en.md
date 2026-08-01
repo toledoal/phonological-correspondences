@@ -117,9 +117,13 @@ uses IE-CoR expert cognacy (§4.6). Every quantity is reproducible from a single
 **On "protoform-agnostic."** We withhold protoforms, sound laws, and sound classes from the discovery
 computation. We do *not* claim to be free of all historical inference: statistical cognacy (LexStat) learns
 language-pair sound correspondences and clusters by them, so a genealogical/correspondence assumption is present
-in how cognate sets are formed. What is kept out is the *reconstructed ancestor and the pre-stated laws*; §4.6
-quantifies how much LexStat's choices shape the repertoire, and §4.3 controls for representation. The honest
-scope is therefore "protoform- and sound-law-free," not "assumption-free."
+in how cognate sets are formed. But that assumption is the **Neogrammarian** one — cognacy evidenced by
+*recurrent, systematic correspondence* (what LexStat measures), which is the evidence *for* cognation, not the
+reconstructed ancestor inferred on top of it. We keep this foundation and set aside only the reconstructive step.
+Filtering the input to reconstruction-certified cognates would defeat the design — it would leak the historical
+answer into the data and forfeit the independent test — so what is kept out is the *reconstructed ancestor and the
+pre-stated laws*; §4.6 quantifies how much LexStat's choices shape the repertoire, and §4.3 controls for
+representation. The honest scope is therefore "protoform- and sound-law-free," not "assumption-free."
 
 Two families give a minimal comparative frame; "IE" and "AN" are pilot genealogical boundaries, not results.
 
