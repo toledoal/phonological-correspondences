@@ -252,9 +252,18 @@ a false cognate almost always produces an operator already present. The type inv
 individual cognate identification. Where genealogical signal does live is the **distributions**: mutual
 information between operator and branch is modest but non-zero and larger in AN than IE ($0.22$ vs $0.14$
 normalized), consistent with §4.5; a few operators dominate each family (effective count $N_{\mathrm{eff}}=24$ of
-119 IE, $18$ of 63 AN).
+119 IE, $18$ of 63 AN — where 119/63 are the *instance-level* type inventories before the support threshold that
+defines the repertoire $O$ of 67/22, distinct again from the branch-union $O_F$ of 97/48 in §4.5).
 
 ## 5. Figures
+
+Two graph types make the repertoire visible; each figure below carries a self-contained caption. **Figures 1–2**
+are the *segmental correspondence graph* $G_S$ for Indo-European and Austronesian: nodes are segments, edges are
+recurrent correspondences coloured by change type. **Figure 3** is the *operator graph* $G_O$ for Indo-European:
+nodes are operators and an edge joins $u,v$ whenever their composition $u\oplus v$ is itself an operator of the
+repertoire — so $G_O$ is the visual face of the composition index $C(O)$ of §4.2. (The two graphs, together with
+a *language graph* $G_L$ over operator distributions, are the three-graph architecture the companion manual
+develops.)
 
 ```latex
 \input{fig-graph-ie}
