@@ -60,8 +60,9 @@ a hunt for known sound laws; it is a change of what is measured and in what orde
 Two further commitments follow, and we state them plainly for the comparative linguist. First, sound laws are
 precise about *that* a change occurred and *what* resulted, but silent about *why* one related system selects one
 outcome where another selects a different one — a "why" that may turn on substrate, contact, and areal pressure,
-i.e. on a network rather than a tree, and that becomes a *measurable* question only once one can see the whole
-space of what a system *could* have done (the "holes" of §4.4). Second, and for the same reason, we call two
+because a language is less a branch off one parent than a new formation confluent from many sources (substrate
+included as *constitutive*, not noise); such questions live on a network rather than a tree, and become
+*measurable* only once one can see the whole space of what a system *could* have done (the "holes" of §4.4). Second, and for the same reason, we call two
 related forms **coderivatives** rather than *cognates*: the family metaphor (sister, mother, daughter tongues)
 presupposes descent from a single ancestor, which is exactly the commitment we withhold from the computation. A
 coderivative is a form co-derived with another, its relatedness evidenced by systematic correspondence; a cognate

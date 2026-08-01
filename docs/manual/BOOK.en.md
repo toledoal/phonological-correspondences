@@ -196,7 +196,8 @@ questions the reconstructive order poses, because that order is busy with a diff
 precision, *that* a form changed and *what* it became. They do not tell us *why* one related system selected one
 outcome while another selected a different one — why, from a shared source, this lineage keeps one part of a word
 and that lineage keeps another. Genealogy names the divergence; it does not explain the *selection*. That "why"
-may depend on things a tree has no room for — substrates, contact, areal pressure — and it only becomes a
+may depend on things a tree has no room for — substrates, contact, areal pressure — because a language is less a
+*branch* off one parent than a **new formation, confluent from many sources** (§3.1). The "why" only becomes a
 *measurable* question once we can see the whole space of what a system *could* have done and ask which parts it
 used. The **holes** $\langle O\rangle\setminus O$ — operators that were available yet went unchosen — are exactly
 that question, made quantitative. This book does not answer the "why"; it builds the instrument that lets it be
@@ -296,14 +297,31 @@ for *the* Latin, until Vulgar Latin and the regional lects had to be let back in
 *from whom did this descend?* It is not built to answer *why did this system select this form, out of those
 available, while that system selected another?*
 
-**The gap the tree cannot close.** Sound laws are magnificently precise about *that* a change occurred and *what*
-forms resulted. They are, by design, silent about *why* a given system took one path where a related system took
-another. From a word for 'water' — say something shaped like *wodr* — why does one lineage keep the front (giving
-*wa-*) and another the coda (giving *-udr*)? "Independent evolution" *names* the fact; it does not *explain* the
-selection. One real possibility — not the only one, and we assert nothing here — is that the systems were not
-evolving in a vacuum but against different **substrates, contacts, and pressures**. To pose that question as a
-*measurable* one, we need more dimensions than a tree provides — and that is where a mathematical description
-earns its place.
+**A deeper point: a language is not the linear descendant of one ancestor.** Here is the claim that most moves us
+past the tree, and we make it carefully. A language is not simply the evolved continuation of a single
+predecessor. It is a **new formation** — not from nothing (there are always materials, antecedents, continuities;
+this is emphatically not *ex nihilo*), but a **synthesis** of many inputs at once: the lects that preceded it,
+the **substrates** left behind by populations who shifted into it, the neighbouring languages it lived in contact
+with, the cultural and social pressures that shaped it. To say that language B "comes from" language A, as a
+single line of descent, mistakes a **confluence for a branch**. The substrate, in particular, is not a smudge on
+an otherwise clean inheritance — it is **constitutive**: a community that adopts a language re-makes it through
+the language it is leaving, so the new system is, in part, co-authored by what it replaced.
+
+We are careful not to caricature the comparative method here: it is not unaware of any of this — borrowing,
+areal convergence, the wave model, *Sprachbünde* are all part of the field's knowledge. The point is subtler.
+The tree's *core inferential machinery* treats contact and substrate as **perturbations to be filtered out** so
+that a clean line of descent can be recovered; the tree stays the backbone, and confluence is the correction made
+around it. Our wager is the reverse — that the confluence is not noise around a descent but **part of what a
+language is** — and that a mathematical, network-shaped description can hold that view *natively*, where a tree,
+by its very form, cannot.
+
+**The gap this leaves.** So sound laws are magnificently precise about *that* a change occurred and *what* forms
+resulted, and silent about *why* a system selected one outcome where a related system selected another. From a
+word for 'water' — say something shaped like *wodr* — why does one system keep the front (giving *wa-*) and
+another the coda (giving *-udr*)? "Independent evolution" *names* the fact; it does not *explain* the selection,
+which may turn on exactly the substrates and confluences a tree cannot represent. To pose that as a *measurable*
+question we need more dimensions than descent provides — and that is where a mathematical description earns its
+place.
 
 **Why "coderivative."** A **coderivative** is a form **co-derived** with another — sharing a real, evidenced
 history of derivation — where the *evidence* is the regularity of correspondence itself, and where we
