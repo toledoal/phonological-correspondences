@@ -315,6 +315,22 @@ around it. Our wager is the reverse — that the confluence is not noise around 
 language is** — and that a mathematical, network-shaped description can hold that view *natively*, where a tree,
 by its very form, cannot.
 
+**We are not the first to distrust the tree — and this is where we go further.** Doubting a purely arborescent
+history has a long and respectable lineage, and we lean on it gladly, *as support*. Johannes Schmidt's **wave
+model** (1872) already set continuous diffusion against Schleicher's family tree; Hugo **Schuchardt**, arguing
+against the Neogrammarians' exceptionless sound laws, held that mixture is everywhere — that there is no wholly
+unmixed language; Trubetzkoy's **Sprachbund** (1928) made convergence among unrelated languages a first-class
+object; and modern computational work has made the network explicit — François's **linkages** (2014), where
+subgroups intersect and no single tree fits, and phylogenetic-network studies that recover massive hidden
+borrowing within Indo-European itself (Nelson-Sathi et al. 2011; List et al. 2014). Our debt to this line is
+real. But notice what most of it still does: it *adds horizontal edges to a framework of descent* — borrowing
+detected as deviation from a tree, a network of who-transmitted-to-whom. We take one step further. We do not
+build descent at all during discovery; we study the **geometry of coderivation directly**, we treat confluence
+and substrate as **constitutive** of a language rather than as edges laid over an inheritance, and we turn the
+unanswered *why-this-form-and-not-that* into a measurable question about the region a system occupies. The wave,
+the mixture, the Sprachbund, and the network are our allies; the **object we measure and the question we put to
+it are our own**.
+
 **The gap this leaves.** So sound laws are magnificently precise about *that* a change occurred and *what* forms
 resulted, and silent about *why* a system selected one outcome where a related system selected another. From a
 word for 'water' — say something shaped like *wodr* — why does one system keep the front (giving *wa-*) and

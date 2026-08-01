@@ -89,7 +89,11 @@ primary phenomenon, and we deliberately withhold the historical apparatus (proto
 the computation so it can serve as an *independent* test rather than an input. Feature-difference encodings and
 sound-change typologies exist (e.g. Kümmel's survey of consonant change [13]); what is new here is not the
 encoding but treating the resulting *repertoire* as a measurable region of a feature space and characterizing it
-with explicit null models. **Mathematics.** The additive/geometric apparatus draws on additive combinatorics
+with explicit null models. **Confluence, as support.** Our stance that a language is a confluence rather than a
+branch descends from a long tree-skeptical line — Schmidt's wave model [17], Schuchardt's insistence on mixture
+[18], Trubetzkoy's Sprachbund [19], and modern phylogenetic networks and linkages [20–22]; we invoke it as
+*support*, but where those add horizontal edges to a framework of descent (borrowing as deviation from a tree),
+we withhold descent from discovery and study the geometry of coderivation directly. **Mathematics.** The additive/geometric apparatus draws on additive combinatorics
 [14] (sumsets, doubling, additive energy), matroid theory [15] (the dependency structure of the operator set),
 and coding theory [16] (the span as a linear code, the geometry of unrealized "holes"). To our knowledge these
 have not previously been applied to phonological correspondence repertoires.
@@ -345,3 +349,22 @@ association biases evidenced across thousands of languages. *PNAS*, 113(39), 108
 
 *Note (pilot preprint): bibliographic details verified against publisher records where possible; page numbers for
 a few workshop items should be confirmed at typesetting.*
+
+[17] Schmidt, J. (1872). *Die Verwandtschaftsverhältnisse der indogermanischen Sprachen.* Weimar: Böhlau.
+(The wave model, *Wellentheorie*.)
+
+[18] Schuchardt, H. (1885). *Über die Lautgesetze: Gegen die Junggrammatiker.* Berlin: Oppenheim. (And his work
+on language mixture / *Sprachmischung*.)
+
+[19] Trubetzkoy, N. S. (1928). Proposition 16. In *Actes du premier congrès international de linguistes*, The
+Hague. (The *Sprachbund* concept.)
+
+[20] François, A. (2014). Trees, Waves and Linkages: Models of Language Diversification. In C. Bowern & B. Evans
+(eds.), *The Routledge Handbook of Historical Linguistics*, 161–189. London: Routledge.
+
+[21] Nelson-Sathi, S., List, J.-M., Geisler, H., Fangerau, H., Gray, R. D., Martin, W., & Dagan, T. (2011).
+Networks uncover hidden lexical borrowing in Indo-European language evolution. *Proceedings of the Royal Society
+B*, 278(1713), 1794–1803.
+
+[22] List, J.-M., Nelson-Sathi, S., Geisler, H., & Martin, W. (2014). Networks of lexical borrowing and lateral
+gene transfer in language and genome evolution. *BioEssays*, 36(2), 141–150.
