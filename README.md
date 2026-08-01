@@ -20,6 +20,7 @@ Two documents accompany the code:
 
 - **`docs/paper.en.pdf`** — the paper (the thesis and the null-controlled results).
 - **`docs/manual/BOOK.en.pdf`** — the manual: a didactic, worked-example treatment (start with **Chapter 0**).
+- **`docs/RESEARCH-PROGRAM.md`** — the research programme: vision, open questions, and a staged agenda.
 
 ## Headline results (Indo-European & Austronesian pilots)
 
