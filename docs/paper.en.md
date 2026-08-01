@@ -57,6 +57,18 @@ concept assignment, the feature matrix, and the aligner are measurement instrume
 explicit and control for (§3, §4.3). Second, this is emphatically **not** a claim that "sound change is XOR," nor
 a hunt for known sound laws; it is a change of what is measured and in what order.
 
+Two further commitments follow, and we state them plainly for the comparative linguist. First, sound laws are
+precise about *that* a change occurred and *what* resulted, but silent about *why* one related system selects one
+outcome where another selects a different one — a "why" that may turn on substrate, contact, and areal pressure,
+i.e. on a network rather than a tree, and that becomes a *measurable* question only once one can see the whole
+space of what a system *could* have done (the "holes" of §4.4). Second, and for the same reason, we call two
+related forms **coderivatives** rather than *cognates*: the family metaphor (sister, mother, daughter tongues)
+presupposes descent from a single ancestor, which is exactly the commitment we withhold from the computation. A
+coderivative is a form co-derived with another, its relatedness evidenced by systematic correspondence; a cognate
+is the special case of clean descent from one ancestor. None of this denies proto-languages or faults
+reconstruction — it adds a mathematical dimension alongside the symbolic one, and renames only to keep the
+question open.
+
 ### 1.1 Related work
 
 This work sits inside computational historical linguistics but asks an unusual question of it. **Data and tools.**
@@ -96,7 +108,9 @@ phonological finding. Directed history, when wanted, requires a richer object
 $T=(a,b,c,p,\ell_1,\ell_2,w)$ with signature $\sigma(T)=\Delta(a,b)$; this paper studies the symmetric
 signatures. We keep operators of one to three features (**atoms** and small **molecules**).
 
-A family's **repertoire** $O$ is its set of recurrent operators. $O$ generates a subspace
+The forms compared are **coderivatives** (§1): related by a shared, evidenced history — recurrent correspondence
+— without presupposing a single reconstructed ancestor. A family's **repertoire** $O$ is its set of recurrent
+operators over those coderivatives. $O$ generates a subspace
 $\langle O\rangle=\operatorname{span}_{\mathbb F_2}(O)$ of dimension (rank) $r$; crucially $O$ is **not** a
 subspace (not closed under XOR, does not contain $0$) — it is a *region*, and the object of interest is the
 relation between the region $O$ and the capacity $\langle O\rangle$.

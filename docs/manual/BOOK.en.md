@@ -57,9 +57,12 @@ Take one meaning — 'two' — and collect how a few Indo-European languages act
 | Armenian (Western) | `jergu` |
 | Yiddish | `cvej` |
 
-These words are **cognates**: descendants of the same ancient word, changed differently in each language. A
-historical linguist would now reconstruct the ancestor and derive each form from it. **We will not.** We will
-only compare the forms *to each other*.
+These words are **coderivatives**: forms with a shared, real history, worn differently by each language —
+recognizable because their sounds correspond systematically. *(We say* coderivative *rather than* cognate
+*deliberately; §3.1 explains the word and why it matters.)* A historical linguist would now reconstruct their
+common ancestor and derive each form from it. **We will not** — not because we doubt there was one, but because
+we want to study the forms' relationships *directly*, and bring reconstruction back only later, as an independent
+check. We will only compare the forms *to each other*.
 
 ## 0.2 Line two words up, letter by letter
 
@@ -118,7 +121,7 @@ An operator can bundle one, two, or three features. `{voi}` and `{cont}` are **a
 
 ## 0.5 Do this everywhere → the *repertoire*
 
-Repeat §0.2–0.4 for **every pair of cognate words in every meaning** across the whole family. Collect all the
+Repeat §0.2–0.4 for **every pair of coderivative words in every meaning** across the whole family. Collect all the
 operators you find, keeping the ones that recur often enough to be real (not alignment noise). The resulting set
 is the family's **repertoire**, written $O$. For Indo-European it has **67** distinct operators; for Austronesian,
 **22**.
@@ -188,6 +191,16 @@ ask genuinely new questions: its dimension (rank), how much of the space it can 
 (occupancy), whether combining two of its elements tends to land back inside it (additive structure), and which
 generable differences it pointedly avoids (the *holes* $\langle O\rangle\setminus O$). None of these are
 questions the reconstructive order poses, because that order is busy with a different task.
+
+**The question genealogy cannot pose — *why this form, and not that one?*** Sound laws tell us, with great
+precision, *that* a form changed and *what* it became. They do not tell us *why* one related system selected one
+outcome while another selected a different one — why, from a shared source, this lineage keeps one part of a word
+and that lineage keeps another. Genealogy names the divergence; it does not explain the *selection*. That "why"
+may depend on things a tree has no room for — substrates, contact, areal pressure — and it only becomes a
+*measurable* question once we can see the whole space of what a system *could* have done and ask which parts it
+used. The **holes** $\langle O\rangle\setminus O$ — operators that were available yet went unchosen — are exactly
+that question, made quantitative. This book does not answer the "why"; it builds the instrument that lets it be
+asked. (Chapter 3.1 explains why, for the same reason, we speak of *coderivatives* rather than *cognates*.)
 
 **The limit, stated up front.** This is **not** a replacement for the comparative method, and it is **not** a
 claim that "sound change is XOR." It is a change of *order of inference* (Chapter 3). The mathematics describes
@@ -260,6 +273,56 @@ each can serve later as an *external* yardstick rather than a hidden input.
 **The consequence for the whole book.** Everything in Parts II–IV is computed under this rule. Part V is
 where the reserved apparatus (history, and eventually OAS) is allowed back in — as contrast, never as coordinate.
 
+## 3.1 Why we say "coderivative," not "cognate" — a note to the comparative linguist
+
+Throughout this book we call two related forms **coderivatives**, not cognates. The choice is deliberate, and we
+owe the comparative linguist a plain explanation, because it is not cosmetic relabelling but a statement of what
+we are trying to see. We ask for a careful reading here; disagreement is welcome — that is how science works —
+but we want at least to be understood.
+
+**What we are *not* doing.** We are not claiming that proto-languages did not exist, and we are not questioning
+the comparative method or the reconstructions it has produced. Those are among the great achievements of the
+human sciences, and improving them is not our project; it is not our terrain to litigate. We take the historical
+reality of language relatedness as **real**: when the sounds of two forms correspond systematically across many
+words, that regularity is not an accident, and we honour it. On this we stand *with* the comparativist.
+
+**What the inherited vocabulary quietly assumes.** The words the field inherited are *family* words: a **cognate**
+is, etymologically, a "co-born" relative; languages are "sisters," with "mother" and "daughter" tongues
+descending from a single "parent." This metaphor encodes a specific and powerful model — a **tree**, with one
+ancestor at each node — and it has taken the field remarkably far. But a metaphor is also a fence around the
+questions one can ask. A tree has, by construction, a *single* source at each split; it has no natural place for
+substrate, contact, borrowing, or the coexistence of several lects. (Recall that Classical Latin was once taken
+for *the* Latin, until Vulgar Latin and the regional lects had to be let back in.) The family tree answers
+*from whom did this descend?* It is not built to answer *why did this system select this form, out of those
+available, while that system selected another?*
+
+**The gap the tree cannot close.** Sound laws are magnificently precise about *that* a change occurred and *what*
+forms resulted. They are, by design, silent about *why* a given system took one path where a related system took
+another. From a word for 'water' — say something shaped like *wodr* — why does one lineage keep the front (giving
+*wa-*) and another the coda (giving *-udr*)? "Independent evolution" *names* the fact; it does not *explain* the
+selection. One real possibility — not the only one, and we assert nothing here — is that the systems were not
+evolving in a vacuum but against different **substrates, contacts, and pressures**. To pose that question as a
+*measurable* one, we need more dimensions than a tree provides — and that is where a mathematical description
+earns its place.
+
+**Why "coderivative."** A **coderivative** is a form **co-derived** with another — sharing a real, evidenced
+history of derivation — where the *evidence* is the regularity of correspondence itself, and where we
+deliberately do not commit, in the analysis, to a single reconstructed ancestor as the sole source of that shared
+history. It keeps everything the comparativist rightly insists on — relatedness is real, and it is evidenced by
+systematic correspondence — and it sets aside only the one part of the family metaphor that *pre-decides the
+shape of the answer*. A cognate, in this light, is the **special case** of a coderivative whose shared history is
+a clean descent from a single ancestor; the term "coderivative" simply also leaves room for the cases where it is
+not — borrowing, substrate influence, convergence, a network rather than a line.
+
+**Why this matters now.** This is, frankly, an attempt to do for the study of sound history a little of what
+modern methods did for other historical sciences. Genetics did not discard heredity; it *re-described* it in a
+molecular, combinatorial, quantitative framework that could ask questions the older language of "blood" and
+"stock" could not even frame. The study of language may be near a similar threshold: the family-tree vocabulary,
+indispensable as it has been, can reach the limit of what it resolves — just as mathematical, computational, and
+representational tools have become powerful enough to see a little further. This book is an early step onto that
+path. It is **not** a refutation of what came before; it is the addition of a **dimension** to it. Renaming the
+cognate a coderivative is the smallest honest marker of that intent.
+
 ---
 
 # PART II — The instruments (so a reader can reproduce)
@@ -296,10 +359,11 @@ without knowing in advance which sounds correspond?
 
 **The pipeline, in four steps.**
 1. **Segmentation** is already given by Lexibank (IPA `Segments`).
-2. **Statistical cognacy.** We cluster forms of the same concept into likely cognate sets with **LexStat**
-   (LingPy), which learns language-pair-specific sound-correspondence scores and clusters by them. No
-   reconstruction, no expert judgment — just recurrent phonetic correspondence.
-3. **Alignment.** Within a cognate set, we align each pair of forms with Needleman–Wunsch, using a substitution
+2. **Statistical coderivation.** We cluster forms of the same concept into likely **coderivative sets** — what
+   the literature calls *cognate sets* — with **LexStat** (LingPy), which learns language-pair-specific
+   sound-correspondence scores and clusters by them. No reconstruction, no expert judgment — just recurrent
+   phonetic correspondence (§3.1, §5.1).
+3. **Alignment.** Within a coderivative set, we align each pair of forms with Needleman–Wunsch, using a substitution
    cost equal to the fraction of panphon features in which two segments differ. Aligned positions are our
    candidate correspondences.
 4. **The feature matrix.** Each IPA segment maps, via **panphon**, to a vector of phonological features
@@ -330,13 +394,13 @@ Yiddish:    d   r   a   j
 ```
 
 Column 1 gives `t~d` = `{voi}` (our familiar atom); column 3 gives a vowel correspondence `i~a`; the final `j`
-is again a gap. Every aligned, non-identical, non-gap column is one operator instance. Run this over all cognate
+is again a gap. Every aligned, non-identical, non-gap column is one operator instance. Run this over all coderivative
 pairs and you have counted the whole repertoire — mechanically, with no reconstruction anywhere.
 
 **Reproduce.** `make family FAMILY="Indo-European"` runs steps 1–4 and writes the correspondence table;
 `make cognate-eval` runs the validation against IE-CoR.
 
-### 5.1 Cognacy without reconstruction — why the method is built this way
+### 5.1 Coderivation without reconstruction — why the method is built this way
 
 A comparative linguist will raise a sharp objection, and it deserves a straight answer: *a correspondence is
 only meaningful between cognates — forms descended from one ancestor — so aligning same-meaning forms that may
@@ -401,7 +465,7 @@ set is what `make algebra FAMILY="X"` reads.
 
 *(Illustrative interlude. The examples in this section are drawn from well-known grammatical descriptions, not
 computed from our reconstruction-free corpus. They are here to teach one thing: the operators the method finds
-between cognate languages are the **same objects** that alternate inside a single grammar — in plurals, verb
+between coderivatives across languages are the **same objects** that alternate inside a single grammar — in plurals, verb
 paradigms, and derived words. Sound-difference is sound-difference, whether it sits between Greek and Armenian or
 between two forms of one English word.)*
 
@@ -424,7 +488,7 @@ Two-feature operators appear inside grammars too, and so do the famous "corridor
 
 - **A verb paradigm.** English *was* ~ *were* is a single verb's own past tense: `s ~ r`. Historically this is
   Verner's Law followed by rhotacism (`s → z → r`); as an *operator corridor* it is `{voi}` composed with a
-  sonorant step — the very `s → z → r` path the method surfaces from cognates in Chapter 12. A learner meets the
+  sonorant step — the very `s → z → r` path the method surfaces from coderivatives in Chapter 12. A learner meets the
   corridor twice: across the family, and inside one irregular verb.
 - **Latin declension.** *flōs* 'flower' → genitive *flōr-is*: `s ~ r`, the same rhotacism corridor, now a
   case ending.
@@ -432,7 +496,7 @@ Two-feature operators appear inside grammars too, and so do the famous "corridor
   (`{hi}`, `{back}`, `{lo}`) that Chapter 13 treats as *graded* dimensions are exactly what conjugation exploits
   to mark tense.
 
-**The teaching point.** An operator is a unit of *phonological difference*. The method reads it off cognate
+**The teaching point.** An operator is a unit of *phonological difference*. The method reads it off coderivative
 pairs because that isolates it cleanly; but the same units are the working parts of every plural, tense, and
 derivation. When Part V speaks of adding a *directed, context-conditioned* layer (who changes into what, and
 when), morphology is exactly where those directed, conditioned rules become visible inside one grammar. *(None of
@@ -1067,6 +1131,7 @@ a blind test*, never by being assumed.
 | symbol | meaning |
 |---|---|
 | $\phi(a)$ | panphon feature vector of segment $a$ |
+| **coderivative** | two forms with a shared, evidenced history (recurrent correspondence), *without* committing to a single reconstructed ancestor; a cognate is the special case of clean descent (§3.1) |
 | $\Delta(a,b)=\mathbf 1[\phi(a)\neq\phi(b)]$ | operator = indicator of differing features (the signature); $=\phi(a)\oplus\phi(b)$ only on binary features |
 | $O$ (or $O_L$) | repertoire: the set of observed operator **types** |
 | $\langle O\rangle$ | subspace generated by $O$ over $\mathbb F_2$; $r=\dim\langle O\rangle$ (rank) |
