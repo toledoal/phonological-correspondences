@@ -106,8 +106,9 @@ relation between the region $O$ and the capacity $\langle O\rangle$.
 **Corpus.** Lexibank word lists, IPA-segmented, for Indo-European (304 languages available) and Austronesian
 (978), taking per family the languages with the most forms. **Cognacy** is detected statistically with LexStat
 (LingPy); **alignment** is Needleman–Wunsch with substitution cost equal to the fraction of panphon features that
-differ; **features** are a 12-feature primary subset of panphon (the consonantal place/manner/laryngeal features;
-the full subset is listed in the repository). No protoforms, laws, or sound classes enter the computation.
+differ; **features** are a 12-feature primary subset of panphon — `cont, voi, nas, ant, cor, lab, back, round,
+strid, hi, lo, son` (manner, place, laryngeal, and major-class features; panphon's full set is larger, and the
+subselection is a documented, auditable choice, swept in the sensitivity analysis). No protoforms, laws, or sound classes enter the computation.
 Operators are taken from aligned, non-identical, consonantal positions with support thresholds (30 at family
 scale); vowel correspondences are set aside in this pilot (they are dominated by ablaut/reduction in IE and would
 need a graded treatment — a deliberate scope limit, not a claim that they are noiseless). Independent validation

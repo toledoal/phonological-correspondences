@@ -1067,7 +1067,8 @@ a blind test*, never by being assumed.
 All results run from `src/` against `data/db/transf.db` (built by `make family`). Datasets: Lexibank (IE 304 /
 AN 978 languages available; per-family top languages by form count), IE-CoR (`iecor`, expert cognacy + segments),
 Glottolog classification (cached in `data/glottolog_classification.csv`, 26 748 paths). Feature matrix: panphon
-(ternary values; primary feature set of 12 including `lab`). Cognacy: LexStat, threshold 0.55, scorer 100 runs.
+(ternary values); the 12-feature primary subset used is `cont, voi, nas, ant, cor, lab, back, round, strid, hi,
+lo, son` (a documented subselection of panphon's larger set). Cognacy: LexStat, threshold 0.55, scorer 100 runs.
 Alignment: Needleman–Wunsch with panphon feature-fraction cost. Thresholds: operator support $\ge30$ (family),
 $\ge8$ (branch); operators of 1–3 features. Exact per-family counts are printed by each script. Seeds are fixed
 in the null/bootstrap code for reproducibility.
