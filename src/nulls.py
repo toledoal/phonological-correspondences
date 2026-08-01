@@ -139,27 +139,31 @@ def main():
         flag = "  ***" if p < 0.05 else ""
         print(f"  {name:18} {mu:7.3f} {sd:6.3f} {z:+7.2f} {p:7.3f}{flag}")
 
-    # bootstrap IC de C_obs: resampleo Poisson de soportes y re-umbral
+    # IC bootstrap PARAMÉTRICO del soporte, CONSISTENTE con el estimador observado.
+    # O se define umbralando POR PAREJA de segmentos (regla de universes.load): un delta está en O si ALGUNA
+    # pareja (a,b) que lo realiza tiene conteo >= MINEDGE. El bootstrap debe reconstruir O con la MISMA regla
+    # (no agregando conteos por delta, que fue el bug: sesgaba el IC a la baja). Remuestrea cada conteo de pareja
+    # con Poisson y reaplica el umbral por pareja. (Un bootstrap por LENGUA sería más correcto pero requiere los
+    # corpora, no la BD agregada; queda como trabajo futuro.)
     con = sqlite3.connect(DB)
     rows = con.execute("SELECT a,b,count FROM lex_correspondence WHERE family=? AND kind='signal'", (FAMILY,)).fetchall()
     con.close()
-    base = []
+    pairs = []
     for a, b, c in rows:
         if a != b and is_cons(a) and is_cons(b):
             d = delta(a, b)
-            if d: base.append((d, c))
+            if d:
+                pairs.append((d, c))          # una entrada POR PAREJA (misma granularidad que load)
     boot = []
     for _ in range(B):
-        acc = {}
-        for d, c in base:            # Poisson(c) resample de cada conteo, luego re-umbral
-            k = _poisson(rng, c)
-            acc[d] = acc.get(d, 0) + k
-        Ob = [d for d, k in acc.items() if k >= MINEDGE]
+        Ob = {d for d, c in pairs if _poisson(rng, c) >= MINEDGE}   # umbral POR PAREJA → delta presente
         if len(Ob) > 1:
-            boot.append(cofO(Ob))
+            boot.append(cofO(list(Ob)))
     boot.sort()
     lo, hi = boot[int(0.025*len(boot))], boot[int(0.975*len(boot))]
-    print(f"\nIC bootstrap 95% de C(O) (resampleo Poisson de soportes): [{lo:.3f}, {hi:.3f}]  (obs {obs:.3f})")
+    mean_b = sum(boot)/len(boot)
+    print(f"\nIC bootstrap 95% de C(O) (soporte por-pareja, consistente con O): [{lo:.3f}, {hi:.3f}]  "
+          f"media {mean_b:.3f} · obs {obs:.3f}")
     print("\nLectura: C(O) es hallazgo SÓLIDO solo si sobrevive a los nulos 3–5 (rango, realizable, oportunidad).")
 
 

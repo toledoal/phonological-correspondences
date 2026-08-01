@@ -7,7 +7,7 @@
 **Technical report / manual · pilot study · 31 July 2026 · License: CC BY 4.0**
 
 *Companion paper:* "Additive Structure of Phonological Correspondences: A protoform-agnostic method…" (DOI:
-pending). *Code & reproducible pipeline:* (repository / Zenodo DOI: pending).
+pending). *Code & reproducible pipeline:* https://github.com/toledoal/phonological-correspondences (clone to reproduce; Zenodo DOI: pending).
 
 *How to cite:* Toledo Martínez, A. (2026). *Additive Structure of Phonological Correspondences: A Manual.*
 Technical report (DOI: pending).
@@ -108,11 +108,13 @@ Align Eastern vs Western Armenian: `a-tˀ-a-m` against `a-d-a-m`. Again one colu
 again the only feature is voicing → `{voi}`. **The same operator, `{voi}`, shows up in a different word.** That
 recurrence is the point: operators are not one-offs; they *repeat* across the vocabulary.
 
-Now compare the Greek `ð` (the "th" in *this*) with a `d`: they differ in **two** features — a `d` is a full
-stop, a `ð` lets air flow (continuant) and has a certain hiss (strident). So
-$$\text{`d`} \sim \text{`ð`} \;=\; \{cont+strid\}.$$
-An operator can bundle one, two, or three features. `{voi}` is an **atom** (one feature); `{cont+strid}` is a
-**molecule** (several).
+Compare the Greek `ð` (the "th" in *this*) with a `d`: they differ in a **single** feature — a `d` is a full
+stop, a `ð` lets air flow (continuant) — so `d ~ ð = {cont}`, another atom (a spirantization). Now a
+**two-feature** operator: compare a plain voiced stop `d` with a `z`. They differ in two features — continuancy
+(`z` lets air flow) *and* stridency (`z` hisses, `d` does not). So
+$$\text{`d`} \sim \text{`z`} \;=\; \{cont+strid\}.$$
+An operator can bundle one, two, or three features. `{voi}` and `{cont}` are **atoms** (one feature);
+`{cont+strid}` is a **molecule** (several).
 
 ## 0.5 Do this everywhere → the *repertoire*
 
@@ -377,7 +379,7 @@ again, now *within* one grammar:
 
 | language | construction | alternation | operator |
 |---|---|---|---|
-| English | plural of *wife* → *wives* | `f ~ v` | `{voi}` (+`cont`,`strid`) |
+| English | plural of *wife* → *wives* | `f ~ v` | `{voi}` |
 | English | noun *house* `haʊs` → verb *house* `haʊz` | `s ~ z` | `{voi}` |
 | German | *Tag* `taːk` → plural *Tage* `taːgə` (final devoicing) | `k ~ g` | `{voi}` |
 | Dutch | *huis* `hœys` → plural *huizen* `hœyzə` | `s ~ z` | `{voi}` |
@@ -633,8 +635,10 @@ built six nested nulls, each preserving more structure, and asked whether observ
 
 All six survive at $p_{MC}\le0.004$. Even when we draw $|O|$ operators from *exactly the differences the corpus
 made available*, the observed repertoire is significantly more composition-closed. Additive structure is a
-**robust, size-controlled** property. (Bootstrap CIs: IE $[0.214,0.235]$ tight; AN $[0.166,0.217]$, so AN's
-$C(O)$ is more support-sensitive.)
+**robust, size-controlled** property. (Parametric bootstrap over per-segment-pair support, consistent with how
+$O$ is thresholded: IE $[0.208,0.231]$, AN $[0.196,0.237]$, both centred on the point estimate. A
+language-level bootstrap — the statistically preferable unit — is future work, as $C(O)$ is a U-statistic over
+non-independent operator pairs.)
 
 **Three converging signatures.** Against the $\Omega_D$ null: triple density $\tau$ is high (IE $Z=+6.6$, AN
 $+6.5$), the **doubling constant** $\kappa=|O\oplus O|/|O|$ is *low* (IE $Z=-5.1$, AN $-6.0$; small doubling =
