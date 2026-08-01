@@ -1,0 +1,24 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+docs/*.tex
+docs/manual/*.tex
+!docs/*fig*.tex
+!docs/manual/*fig*.tex
+
+# Scratch / temp working files
+data/db/_*.tsv
+
+# OS
+.DS_Store
+
+# Corpora (not distributed here — see data/lexicon/README.md)
+data/lexicon/lexibank/
+data/lexicon/iecor/

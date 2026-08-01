@@ -1,0 +1,10 @@
+panphon
+numpy
+scipy
+scikit-learn
+pandas
+networkx
+epitran
+g2p_en
+nltk
+lingpy

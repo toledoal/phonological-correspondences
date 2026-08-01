@@ -1,0 +1,29 @@
+{
+  "title": "Additive Structure of Phonological Correspondences: A protoform-agnostic method for discovering mathematical patterns in documented linguistic systems",
+  "description": "A reconstruction-free method that represents each attested sound correspondence as the set of phonological features that differ between two aligned segments (a symmetric operator), turning a language family into a measurable repertoire of feature-difference vectors, and studies its geometry and additive structure against explicit null models. Includes the analysis pipeline, the bundled correspondence repertoire, the paper, and a didactic manual. Pilot study on Indo-European and Austronesian.",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "version": "1.0.0-pilot",
+  "creators": [
+    {
+      "name": "Toledo Martínez, Alejandro",
+      "orcid": "0009-0000-1277-9697"
+    }
+  ],
+  "keywords": [
+    "historical linguistics",
+    "phonological correspondences",
+    "sound change",
+    "additive combinatorics",
+    "reproducible research",
+    "computational linguistics"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/toledoal/phonological-correspondences",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this software or its findings, please cite it as below."
+title: "Additive Structure of Phonological Correspondences: A protoform-agnostic method for discovering mathematical patterns in documented linguistic systems"
+abstract: >-
+  A reconstruction-free method that represents each attested sound correspondence
+  as the set of phonological features that differ between two aligned segments (a
+  symmetric operator), turning a language family into a measurable repertoire of
+  feature-difference vectors, and studies its geometry and additive structure
+  against explicit null models — with the historical apparatus kept out of the
+  computation so it can serve as an independent test.
+type: software
+authors:
+  - family-names: "Toledo Martínez"
+    given-names: "Alejandro"
+    orcid: "https://orcid.org/0009-0000-1277-9697"
+version: "1.0.0-pilot"
+date-released: "2026-07-31"
+license: MIT
+repository-code: "https://github.com/toledoal/phonological-correspondences"
+keywords:
+  - historical linguistics
+  - phonological correspondences
+  - sound change
+  - additive combinatorics
+  - reproducible research
+  - computational linguistics
+preferred-citation:
+  type: article
+  title: "Additive Structure of Phonological Correspondences: A protoform-agnostic method for discovering mathematical patterns in documented linguistic systems"
+  authors:
+    - family-names: "Toledo Martínez"
+      given-names: "Alejandro"
+      orcid: "https://orcid.org/0009-0000-1277-9697"
+  year: 2026
+  notes: "Preprint (pilot study)."
