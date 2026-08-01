@@ -7,7 +7,7 @@
 **Preprint · pilot study · 31 July 2026 · License: CC BY 4.0**
 
 *Companion manual:* "Additive Structure of Phonological Correspondences: A Manual" (DOI: pending). *Code &
-reproducible pipeline:* (repository / Zenodo DOI: pending).
+reproducible pipeline:* https://github.com/toledoal/phonological-correspondences (clone to reproduce; Zenodo DOI: pending).
 
 *How to cite:* Toledo Martínez, A. (2026). *Additive Structure of Phonological Correspondences: A
 protoform-agnostic method for discovering mathematical patterns in documented linguistic systems.* Preprint
@@ -20,10 +20,11 @@ protoform-agnostic method for discovering mathematical patterns in documented li
 Historical linguistics infers ancestral forms and then derives documented ones from them. We invert that order.
 Representing each attested sound correspondence not as a directed change but as the **set of phonological features
 that differ** between two aligned segments — a symmetric *operator* — a language family becomes a **repertoire**
-$O$ of feature-difference vectors over $\mathbb F_2$, computed with no reconstruction, no sound laws, and no
-externally imposed sound classes. We study the geometry and additive structure of $O$ for Indo-European (IE) and
-Austronesian (AN), drawn reconstruction-free from Lexibank via statistical cognacy (LexStat) and
-feature-distance alignment (panphon). Four results. (i) **Occupancy is not sparsity of the languages but vastness
+$O$ of feature-difference vectors over $\mathbb F_2$, computed with **no protoforms, no sound laws, and no
+externally imposed sound classes**. (We say *protoform-agnostic* rather than "reconstruction-free": cognacy is
+still detected statistically with LexStat, which is itself a correspondence-based inference — see §3.) We study
+the geometry and additive structure of $O$ for Indo-European (IE) and Austronesian (AN), drawn from Lexibank via
+statistical cognacy (LexStat) and feature-distance alignment (panphon). Four results. (i) **Occupancy is not sparsity of the languages but vastness
 of the space:** of the differences the corpus actually makes available, IE realizes 63% and AN 48%. (ii) The
 repertoire is **additively organized** — combining two operators lands back in $O$ far more often than chance,
 and this survives a hierarchy of six nested null models up to and including sampling from the corpus's own
@@ -55,12 +56,40 @@ concept assignment, the feature matrix, and the aligner are measurement instrume
 explicit and control for (§3, §4.3). Second, this is emphatically **not** a claim that "sound change is XOR," nor
 a hunt for known sound laws; it is a change of what is measured and in what order.
 
+### 1.1 Related work
+
+This work sits inside computational historical linguistics but asks an unusual question of it. **Data and tools.**
+We build on Lexibank [1], the aggregated, IPA-standardized wordlist repository; panphon [2] for articulatory
+feature vectors; LingPy/LexStat [3] for statistical cognate detection; Glottolog [4] for genealogical
+classification; Concepticon [5] for comparison meanings; and IE-CoR [6] for expert Indo-European cognacy used
+only in validation (§4.6). Alignment uses Needleman–Wunsch [7]; feature-based phonetic alignment and cognate
+scoring descend from Kondrak [8] and Dolgopolsky sound classes [9].
+
+**Where the field concentrates, and where we differ.** Most computational work uses sound correspondences
+*instrumentally* — as a means to detect cognates, build phylogenies, or date splits: LexStat [3], global-scale
+phylogenetic inference [10], and cognate-detection benchmarks [11] all treat the correspondence as a step toward
+a *tree* or an *ancestor*. Typological work such as Blasi et al. [12] tests sound–meaning associations across
+thousands of languages, again with the correspondence/segment as an instrument. Our object is different: we study
+the **set of feature-difference operators itself** — its geometry, additive structure, and occupancy — as the
+primary phenomenon, and we deliberately withhold the historical apparatus (protoforms, laws, sound classes) from
+the computation so it can serve as an *independent* test rather than an input. Feature-difference encodings and
+sound-change typologies exist (e.g. Kümmel's survey of consonant change [13]); what is new here is not the
+encoding but treating the resulting *repertoire* as a measurable region of a feature space and characterizing it
+with explicit null models. **Mathematics.** The additive/geometric apparatus draws on additive combinatorics
+[14] (sumsets, doubling, additive energy), matroid theory [15] (the dependency structure of the operator set),
+and coding theory [16] (the span as a linear code, the geometry of unrealized "holes"). To our knowledge these
+have not previously been applied to phonological correspondence repertoires.
+
 ## 2. The operator and the repertoire
 
-For two aligned segments $a,b$ with panphon feature map $\phi$, the **operator** is the symmetric
-feature-difference
-$$\Delta(a,b)=\{k:\phi_k(a)\neq\phi_k(b)\}\;=\;\phi(a)\oplus\phi(b)\ \ (\text{over binary features}).$$
-It is a *contrast*, not a directed change: $\Delta(a,b)=\Delta(b,a)$, so $\Delta$ does not distinguish
+For two aligned segments $a,b$ with panphon feature map $\phi$, the **operator** is the **indicator of differing
+features**
+$$\Delta(a,b)=\mathbf 1\!\left[\phi(a)\neq\phi(b)\right]=\{k:\phi_k(a)\neq\phi_k(b)\}\in\mathbb F_2^{\,n}.$$
+This is a well-defined $\mathbb F_2$ vector for *any* feature alphabet. Over strictly binary features it coincides
+with $\phi(a)\oplus\phi(b)$; but panphon features are **ternary** ($+1,0,-1$), so treating composition as XOR is a
+*binary approximation* — an identity on binary sub-features whose $\approx2\%$ failures (in IE) precisely localize
+the non-binary dimensions (height), a diagnostic we return to. $\Delta$
+is a *contrast*, not a directed change: $\Delta(a,b)=\Delta(b,a)$, so $\Delta$ does not distinguish
 $t\!\to\!s$ from $s\!\to\!t$, and "each operator is its own inverse" is a consequence of that symmetry, not a
 phonological finding. Directed history, when wanted, requires a richer object
 $T=(a,b,c,p,\ell_1,\ell_2,w)$ with signature $\sigma(T)=\Delta(a,b)$; this paper studies the symmetric
@@ -76,10 +105,19 @@ relation between the region $O$ and the capacity $\langle O\rangle$.
 **Corpus.** Lexibank word lists, IPA-segmented, for Indo-European (304 languages available) and Austronesian
 (978), taking per family the languages with the most forms. **Cognacy** is detected statistically with LexStat
 (LingPy); **alignment** is Needleman–Wunsch with substitution cost equal to the fraction of panphon features that
-differ; **features** are panphon's primary set (12 features including labiality). No protoforms, laws, or sound
-classes enter the computation. Operators are taken from aligned, non-identical, consonantal positions (vowels are
-ablaut noise) with support thresholds (30 at family scale). Independent validation uses IE-CoR expert cognacy
-(§4.6). Every quantity is reproducible from a single `make` target (§7).
+differ; **features** are a 12-feature primary subset of panphon (the consonantal place/manner/laryngeal features;
+the full subset is listed in the repository). No protoforms, laws, or sound classes enter the computation.
+Operators are taken from aligned, non-identical, consonantal positions with support thresholds (30 at family
+scale); vowel correspondences are set aside in this pilot (they are dominated by ablaut/reduction in IE and would
+need a graded treatment — a deliberate scope limit, not a claim that they are noiseless). Independent validation
+uses IE-CoR expert cognacy (§4.6). Every quantity is reproducible from a single `make` target (§7).
+
+**On "protoform-agnostic."** We withhold protoforms, sound laws, and sound classes from the discovery
+computation. We do *not* claim to be free of all historical inference: statistical cognacy (LexStat) learns
+language-pair sound correspondences and clusters by them, so a genealogical/correspondence assumption is present
+in how cognate sets are formed. What is kept out is the *reconstructed ancestor and the pre-stated laws*; §4.6
+quantifies how much LexStat's choices shape the repertoire, and §4.3 controls for representation. The honest
+scope is therefore "protoform- and sound-law-free," not "assumption-free."
 
 Two families give a minimal comparative frame; "IE" and "AN" are pilot genealogical boundaries, not results.
 
@@ -228,3 +266,53 @@ coordinate system. None of these affect the null-controlled results, but they bo
 Datasets: Lexibank, IE-CoR, Glottolog (cached classification). LexStat threshold 0.55, 100-run scorer; panphon
 12-feature primary set; seeds fixed. The companion **manual** (`docs/manual`) gives worked, hand-computed
 examples of every measure and the full derivations.
+
+## References
+
+[1] List, J.-M., Forkel, R., Greenhill, S. J., Rzymski, C., Englisch, J., & Gray, R. D. (2022). Lexibank, a
+public repository of standardized wordlists with computed phonological and lexical features. *Scientific Data*,
+9, 316.
+
+[2] Mortensen, D. R., Littell, P., Bharadwaj, A., Goyal, K., Dyer, C., & Levin, L. (2016). PanPhon: A Resource
+for Mapping IPA Segments to Articulatory Feature Vectors. In *Proceedings of COLING 2016*, 3475–3484.
+
+[3] List, J.-M. (2012). LexStat: Automatic detection of cognates in multilingual wordlists. In *Proceedings of
+the EACL 2012 Joint Workshop of LINGVIS & UNCLH*, 117–125. (See also the LingPy library: List, J.-M. & Forkel, R.)
+
+[4] Hammarström, H., Forkel, R., Haspelmath, M., & Bank, S. (2023). *Glottolog* (version 4.x). Leipzig: Max
+Planck Institute for Evolutionary Anthropology. https://glottolog.org
+
+[5] List, J.-M., Rzymski, C., Greenhill, S., Schweikhard, N., et al. (eds.) *Concepticon: A Resource for the
+Linking of Concept Lists.* https://concepticon.clld.org
+
+[6] Heggarty, P., Anderson, C., Scarborough, M., et al. (2023). Language trees with sampled ancestors support a
+hybrid model for the origin of Indo-European languages. *Science*, 381, eabg0818. (Dataset: IE-CoR.)
+
+[7] Needleman, S. B., & Wunsch, C. D. (1970). A general method applicable to the search for similarities in the
+amino acid sequence of two proteins. *Journal of Molecular Biology*, 48(3), 443–453.
+
+[8] Kondrak, G. (2000). A New Algorithm for the Alignment of Phonetic Sequences. In *Proceedings of NAACL 2000*,
+288–295.
+
+[9] Dolgopolsky, A. B. (1986). A probabilistic hypothesis concerning the oldest relationships among the language
+families of northern Eurasia. In *Typology, Relationship and Time* (Shevoroshkin, ed.).
+
+[10] Jäger, G. (2018). Global-scale phylogenetic linguistic inference from lexical resources. *Scientific Data*,
+5, 180189.
+
+[11] Rama, T., List, J.-M., Wahle, J., & Jäger, G. (2018). Are Automatic Methods for Cognate Detection Good
+Enough for Phylogenetic Reconstruction in Historical Linguistics? In *Proceedings of NAACL-HLT 2018*, 393–400.
+
+[12] Blasi, D. E., Wichmann, S., Hammarström, H., Stadler, P. F., & Christiansen, M. H. (2016). Sound–meaning
+association biases evidenced across thousands of languages. *PNAS*, 113(39), 10818–10823.
+
+[13] Kümmel, M. J. (2007). *Konsonantenwandel: Bausteine zu einer Typologie des Lautwandels.* Wiesbaden: Reichert.
+
+[14] Tao, T., & Vu, V. H. (2006). *Additive Combinatorics.* Cambridge University Press.
+
+[15] Oxley, J. (2011). *Matroid Theory* (2nd ed.). Oxford University Press.
+
+[16] MacWilliams, F. J., & Sloane, N. J. A. (1977). *The Theory of Error-Correcting Codes.* North-Holland.
+
+*Note (pilot preprint): bibliographic details verified against publisher records where possible; page numbers for
+a few workshop items should be confirmed at typesetting.*
