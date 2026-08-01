@@ -788,10 +788,15 @@ work):
 
 All six survive at $p_{MC}\le0.004$. Even when we draw $|O|$ operators from *exactly the differences the corpus
 made available*, the observed repertoire is significantly more composition-closed. Additive structure is a
-**robust, size-controlled** property. (Parametric bootstrap over per-segment-pair support, consistent with how
-$O$ is thresholded: IE $[0.208,0.231]$, AN $[0.196,0.237]$, both centred on the point estimate. A
-language-level bootstrap — the statistically preferable unit — is future work, as $C(O)$ is a U-statistic over
-non-independent operator pairs.)
+**robust, size-controlled** property — but *how much* it is robust differs sharply between the two families, and
+the right test is a **language-level bootstrap** (resample the valid unit — the language — with replacement, rerun
+the whole pipeline, $B=40$; $C(O)$ is a U-statistic over non-independent pairs, so the language, not the pair, is
+the unit). It gives $C(O)$ CI$_{95}=[0.18,0.22]$ for **IE** — tight, comfortably above the null floor — but
+$[0.15,0.30]$ for **AN**, wide and with its lower end near the null. So **IE's additive structure is robust to
+which languages are sampled; Austronesian's is fragile** — a caution the size-matched nulls alone did not
+surface, and a direct consequence of AN's smaller, more variable repertoire. (An earlier parametric
+support-bootstrap gave narrower intervals, $\approx[0.21,0.23]$/$[0.20,0.24]$; the language-level intervals
+supersede it as the statistically valid unit.)
 
 **Three converging signatures** (each on unordered tuples, to match $C(O)$). Against the $\Omega_D$ null:
 **triple density** $\tau(O)=|\{\{u,v,w\}\subseteq O:u\oplus v=w\}|/\binom{|O|}{3}$ is high (IE $Z=+6.6$, AN

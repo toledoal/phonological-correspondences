@@ -32,7 +32,8 @@ actually *available* — $0.29$–$0.63$ (IE) and $0.27$–$0.48$ (AN) depending
 alignment-independently or from the aligner — an order of magnitude denser than the span, not sparse. (ii) The
 repertoire is **additively organized** — combining two operators lands back in $O$ far more often than chance,
 and this survives a hierarchy of six nested null models up to and including sampling from the corpus's own
-opportunity set ($Z=+6.3$ IE, $+5.9$ AN; $p_{\mathrm{MC}}\le0.004$). (iii) That additive structure is a property
+opportunity set ($Z=+6.3$ IE, $+5.9$ AN; $p_{\mathrm{MC}}\le0.004$) — robustly in IE but only fragilely in AN
+under a language-level bootstrap (CI$_{95}$ $[0.18,0.22]$ vs $[0.15,0.30]$). (iii) That additive structure is a property
 of the **phonological representation**, not of genealogy: a concept-permuted control matches it, and branch
 repertoires overlap no more than random language groupings in IE (whereas in AN they are significantly *more
 differentiated* than random — a genealogical signal). (iv) The
@@ -209,6 +210,13 @@ like an approximate (possibly affine) subspace. Its dependency structure has a b
 (minimal XOR-zero triples), with `{voi}` (voicing) in the most of them — the additive hub. *(Circuit and hole
 counts scale with $|O|$, so IE-vs-AN raw counts are not directly comparable; the size-controlled comparison is
 the $Z$ against nulls.)*
+
+**Robustness (language-level bootstrap).** Because $C(O)$ is a U-statistic over non-independent operator pairs,
+the valid resampling unit is the **language**: we resample languages with replacement and rerun the whole
+pipeline ($B=40$). The result separates the two families sharply — $C(O)$ CI$_{95}=[0.18,0.22]$ for IE (tight,
+comfortably above the null) but $[0.15,0.30]$ for AN (wide, lower end near the null). **IE's additive structure
+is robust to which languages are sampled; Austronesian's is fragile** — a caution the size-matched nulls did not
+surface, and a reminder that with a small, variable repertoire the per-family sample matters.
 
 ### 4.3 What the additive structure is — and is not
 

@@ -69,9 +69,7 @@ about *diagnosis*, not a licence to treat every outcome as success.
 - **Scholarship:** add a Related Work section and full references (LingPy/List; panphon/Mortensen; Lexibank/List;
   IE-CoR/Heggarty et al. 2023; Glottolog/Hammarström; Concepticon; ASJP; Jäger; Blasi et al.; additive
   combinatorics; matroid/coding theory). Reframe "reconstruction-free" honestly.
-- **Estimation:** replace the support bootstrap with a **language-level** bootstrap/jackknife (valid for a
-  U-statistic over non-independent pairs); report BCa intervals; add **FDR** control across the nulls × families
-  × measures grid; raise simulation count so $p_{MC}$ is informative.
+- **Estimation:** language-level bootstrap DONE (`make bootstrap-lang`, percentile CI, results in data/results/): C(O) robust in IE [0.18,0.22], fragile in AN [0.15,0.30]. Still open: BCa/jackknife intervals, FDR across the nulls × families × measures grid, larger simulation count.
 - **Sensitivity:** support threshold, weight cap, and feature subset swept (DONE, `make sensitivity`): headlines
   invariant (C(O), rank, occupancy stable well above the null across all three). LexStat-threshold and aligner
   sweeps (need corpora) still scheduled. Document the exact **12-feature** subselection (or move to a standard panphon set).
