@@ -345,7 +345,7 @@ where $\phi$ is the panphon feature map. Equivalently, over binary features, $\D
 the XOR of the two feature vectors. We keep operators of one to three features (single changes and small
 bundles), which are the phonologically interpretable ones.
 
-**(b/d) Worked reading.** `d ~ z` differ in continuancy and stridency $\Rightarrow \{cont+strid\}$ (a
+**Worked reading.** `d ~ z` differ in continuancy and stridency $\Rightarrow \{cont+strid\}$ (a
 spirantization signature). `t ~ s` $\Rightarrow \{cont+strid\}$; but `t ~ f` $\Rightarrow \{cont+cor+strid+lab\}$
 — *not the same operator*, because `f` is a labiodental and differs from `t` in place as well. The feature
 representation makes the distinction automatically; lumping both as "lenition" would erase it.
@@ -656,8 +656,10 @@ the type sets.
 **The question.** Can we describe the repertoire's dependency structure in a way that does *not* depend on
 the arbitrary choice of feature basis?
 
-**The matroid.** The operator×feature incidence matrix defines a **binary matroid**. Its most interpretable
-invariants are the **circuits**: minimal sets of operators whose XOR is zero. A size-3 circuit
+**The matroid.** The operator×feature incidence matrix defines a **binary matroid**. *(In plain terms, a matroid
+is just the bookkeeping of what is independent versus redundant — the same idea as rank in Chapter 8, lifted from
+single features to whole operators. You do not need the theory; you need one object it hands us.)* Its most
+interpretable invariants are the **circuits**: minimal sets of operators whose XOR is zero. A size-3 circuit
 $u\oplus v\oplus w = 0$ means $w=u\oplus v$ — three operators locked in an additive triangle.
 
 **Worked example — a real circuit.** Three Indo-European operators are locked in an additive triangle:
@@ -691,8 +693,11 @@ without the extra place features). If `{voi}` is present and `{strid}` is presen
 missing combination is a **hole at distance 1**: available in the corpus's opportunities, one feature away from
 what is attested, yet unchosen. Cataloguing exactly these near-misses is the geometry below.
 
-**The code and the holes.** Treat $\langle O\rangle$ as a binary linear code. Among the operator-shaped
-vectors (weight $\le 3$) that the code generates, some are observed ($O$) and the rest are **holes**. For each
+**The code and the holes.** Treat $\langle O\rangle$ as a binary linear code. *(A linear code is simply a set
+closed under XOR — here, every operator the observed ones can generate. The point of borrowing the term is that
+coding theory already has tools for exactly our question: which points are missing, and how far.)* Among the
+operator-shaped vectors (weight $\le 3$) that the code generates, some are observed ($O$) and the rest are
+**holes**. For each
 hole $x$ we measure its depth $d(x,O)=\min_{o\in O}d_H(x,o)$ (Hamming distance to the nearest observed operator).
 
 **The geometry of holes.**
@@ -730,7 +735,9 @@ geometry is a total order, a partial order, or a state graph is a separate quest
 XOR-break in its 47 relevant triples — which means *none was detected in this sample* (with $n=47$ a small true
 rate could be missed), not that AN "has no graded dimensions."
 
-**The fix, when wanted.** For a ternary feature one can use a one-hot encoding
+**The fix, when wanted** *(for the mathematically inclined; skippable on a first read)*. The takeaway in one
+line: *stop forcing every feature to be a yes/no switch — give a three-valued feature three states instead of
+one bit.* Concretely, for a ternary feature one can use a one-hot encoding
 $-1\mapsto e_1, 0\mapsto e_2, +1\mapsto e_3$, restoring exact composition for *categorical* states; or, for
 *ordered* states, a path metric with $d(-1,+1)=2$. The general system is then a **product of typed spaces**
 $$\mathcal F=\prod_{j\in B}\mathbb F_2 \times \prod_{j\in C}\Delta_{m_j} \times \prod_{j\in O}\mathbb Z,$$
@@ -752,7 +759,9 @@ almost all the mass, many carry almost none, and some words (like *ihu*) carry n
 exactly what entropy measures.
 
 **Distribution and its concentration.** With per-instance counts we form $P_L(o)$, its Shannon entropy $H$,
-and the **effective number of operators** $N_{\text{eff}}=2^{H}$. IE: $N_{\text{eff}}=24$ of 119 types; AN:
+and the **effective number of operators** $N_{\text{eff}}=2^{H}$. *(Entropy just measures how* concentrated *a
+distribution is — low when one operator dominates, high when many share the load; $N_{\text{eff}}$ turns it back
+into a count: "as if this many operators were used equally.")* IE: $N_{\text{eff}}=24$ of 119 types; AN:
 $18$ of 63. A handful of operators dominate each family.
 
 **Three geometries.** *Unweighted* (what exists), *frequency-weighted* (how often), *confidence-weighted*
@@ -760,8 +769,10 @@ $18$ of 63. A handful of operators dominate each family.
 confidence in both families — the repertoire's ranking is **robust to confidence weighting**. (Support,
 distribution, and confidence are nonetheless different robustnesses, and should be reported separately.)
 
-**Mutual information — where dependence lives.** $I(O;\cdot)$ (normalized) between the operator and four
-variables:
+**Mutual information — where dependence lives.** *(Mutual information asks a simple question: once I tell you the
+branch, concept, or position, how much less uncertain are you about which operator it is? Zero means the operator
+does not depend on that variable at all; higher means it does.)* $I(O;\cdot)$ (normalized) between the operator
+and four variables:
 
 | | branch $R$ | concept $C$ | position | context $\Gamma$ |
 |---|---|---|---|---|
@@ -839,7 +850,7 @@ The genealogical signal, where it exists, is **distributional** (Chapter 14), no
 
 **The question.** How do we know a "system" pattern is not just general phonetic geometry?
 
-**(c/e) The controls, and their status.**
+**The controls, and their status.**
 - **Concept permutation** ($D_R$, Chapter 17): destroys form↔concept links. *Run* — and it matches the real
   additive structure, showing much of it is inventory-driven.
 - **Branch-label permutation** (Chapter 15): arbitrary groupings of the same sizes. *Run* — the grouping null
