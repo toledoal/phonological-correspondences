@@ -30,7 +30,8 @@ repertoire is **additively organized** — combining two operators lands back in
 and this survives a hierarchy of six nested null models up to and including sampling from the corpus's own
 opportunity set ($Z=+6.3$ IE, $+5.9$ AN; $p_{\mathrm{MC}}\le0.004$). (iii) That additive structure is a property
 of the **phonological representation**, not of genealogy: a concept-permuted control matches it, and branch
-repertoires overlap no more than random language groupings in IE (though they do in AN). (iv) The
+repertoires overlap no more than random language groupings in IE (whereas in AN they are significantly *more
+differentiated* than random — a genealogical signal). (iv) The
 **generable-but-unattested** operators $\langle O\rangle\setminus O$ form a concrete geometry of near-misses.
 The contribution is not a sound law but an *object of study* — the empirical repertoire of correspondences and
 its measurable additive geometry — together with an inference order that keeps the historical apparatus out of
@@ -158,13 +159,21 @@ structure and each sampled to size $|O|$; we report $Z$ and empirical $p_{\mathr
 | realizable $U_S$ | +9.2 | +7.3 |
 | **opportunity $\Omega_D$** | **+6.3** | **+5.9** |
 
-All six survive at $p_{\mathrm{MC}}\le0.004$: even drawn from exactly the differences the corpus made available,
-the observed repertoire is significantly more composition-closed. Three further additive statistics agree
-(against the $\Omega_D$ null): triple density $\tau$ is high (IE $Z{=}{+}6.6$, AN ${+}6.5$), the doubling constant
-$\kappa=|O\oplus O|/|O|$ is low (IE $Z{=}{-}5.1$, AN ${-}6.0$), and additive energy $E$ is high (IE ${+}7.4$, AN
-${+}7.3$). The repertoire behaves like an approximate (possibly affine) subspace. Its dependency structure has a
-basis-independent core: as a binary matroid it has 162 (IE) and 18 (AN) three-element circuits, with `{voi}`
-(voicing) the most-connected operator in both — the additive hub.
+All six survive at $p_{\mathrm{MC}}\le0.004$ (500 simulations, the resolution floor; a larger $B$ and FDR control
+across the null $\times$ family $\times$ statistic grid are scheduled — see the research programme). We describe
+the six as "increasingly constrained" rather than a strict nesting: the span null (row 3) samples a different
+ambient set than the others, so the $Z$ column is not monotone. Even drawn from exactly the differences the
+corpus made available, the observed repertoire is significantly more composition-closed. Three further additive
+statistics agree (against the $\Omega_D$ null), each on unordered tuples to match $C(O)$: **triple density**
+$\tau(O)=|\{\{u,v,w\}\subseteq O: u\oplus v=w\}|/\binom{|O|}{3}$ is high (IE $Z{=}{+}6.6$, AN ${+}6.5$); the
+**doubling constant** $\kappa=|O\oplus O|/|O|$ (with $O\oplus O=\{u\oplus v\}$) is low (IE $Z{=}{-}5.1$, AN
+${-}6.0$; small doubling = strong additive structure); and the **additive energy**
+$E(O)=|\{(a,b,c,d)\in O^4:a\oplus b=c\oplus d\}|/|O|^3$ is high (IE ${+}7.4$, AN ${+}7.3$). The repertoire behaves
+like an approximate (possibly affine) subspace. Its dependency structure has a basis-independent core: the
+**vector matroid** of $O$ (operators as $\mathbb F_2$ vectors) has 162 (IE) and 18 (AN) three-element circuits
+(minimal XOR-zero triples), with `{voi}` (voicing) in the most of them — the additive hub. *(Circuit and hole
+counts scale with $|O|$, so IE-vs-AN raw counts are not directly comparable; the size-controlled comparison is
+the $Z$ against nulls.)*
 
 ### 4.3 What the additive structure is — and is not
 

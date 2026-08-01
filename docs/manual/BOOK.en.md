@@ -621,8 +621,10 @@ $\{voi+cont+strid\}$; the pair `b~f`, when it occurs, necessarily carries that s
 which operator it would be, and we can check whether the system realizes it.
 
 **Does it beat chance? A hierarchy of nulls.** A single number is descriptive until compared to a null. We
-built six nested nulls, each preserving more structure, and asked whether observed $C(O)$ exceeds them
-($Z$-scores; empirical $p_{MC}$ from 500 simulations):
+built six *increasingly constrained* nulls (not a strict nesting — the span null samples a different ambient set,
+so the $Z$ column below is not monotone), and asked whether observed $C(O)$ exceeds them ($Z$-scores; empirical
+$p_{MC}$ from 500 simulations — the resolution floor; a larger run and multiple-comparison control are future
+work):
 
 | null (preserves…) | IE $Z$ | AN $Z$ |
 |---|---|---|
@@ -640,10 +642,13 @@ $O$ is thresholded: IE $[0.208,0.231]$, AN $[0.196,0.237]$, both centred on the 
 language-level bootstrap — the statistically preferable unit — is future work, as $C(O)$ is a U-statistic over
 non-independent operator pairs.)
 
-**Three converging signatures.** Against the $\Omega_D$ null: triple density $\tau$ is high (IE $Z=+6.6$, AN
-$+6.5$), the **doubling constant** $\kappa=|O\oplus O|/|O|$ is *low* (IE $Z=-5.1$, AN $-6.0$; small doubling =
-strong additive structure), and additive energy $E$ is high (IE $Z=+7.4$, AN $+7.3$). The repertoire behaves like
-an approximate subspace, possibly an **affine** one $v+W$ (a family of operators sharing an obligatory feature).
+**Three converging signatures** (each on unordered tuples, to match $C(O)$). Against the $\Omega_D$ null:
+**triple density** $\tau(O)=|\{\{u,v,w\}\subseteq O:u\oplus v=w\}|/\binom{|O|}{3}$ is high (IE $Z=+6.6$, AN
+$+6.5$); the **doubling constant** $\kappa=|O\oplus O|/|O|$ (how much the sumset $O\oplus O=\{u\oplus v\}$ blows
+up) is *low* (IE $Z=-5.1$, AN $-6.0$; small doubling = strong additive structure); and the **additive energy**
+$E(O)=|\{(a,b,c,d)\in O^4:a\oplus b=c\oplus d\}|/|O|^3$ is high (IE $Z=+7.4$, AN $+7.3$). The repertoire behaves
+like an approximate subspace, possibly an **affine** one $v+W$ (a family of operators sharing an obligatory
+feature — a direct affineness test is future work).
 
 **The honest caveat — this is not (yet) a genealogical signal.** At the level of operator *types*, this
 additive structure is largely a property of the phonological **inventory and feature representation**, not of
