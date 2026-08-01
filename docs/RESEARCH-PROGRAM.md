@@ -128,12 +128,22 @@ Take the additive-combinatorics / matroid / coding-theory framing from metaphor 
 about cross-family dependency structure (same dependencies under different feature names)? **Persistent topology**
 of the composition complex ($u\oplus v=w$ triangles across a frequency threshold); **spectral** signatures of
 $G_S/G_O$. Question: *which mathematical objects are the right invariants of a phonological system?*
-A concrete sub-item: **the order/permutation dimension (metathesis).** Present operators live in feature space
+**A dedicated future line — the mathematics of metathesis.** Present operators live in feature space
 $\mathbb F_2^n$ at aligned slots; a monotonic aligner cannot represent a *reordering* of segments (TR↔RT), so
-metathesis is currently mis-scored as substitutions+gaps. Add it as a first-class second dimension — an operator
-carries a feature-change *and* a permutation of skeleton positions (the symmetric group $S_k$ beside
-$\mathbb F_2^n$) — detected alignment-free by same-multiset/different-order skeletons, and measured by permutation
-distance. This is the mirror-inversion the consonantal-skeleton view was designed to catch.
+metathesis is currently mis-scored as substitutions+gaps. It should become a first-class second dimension: an
+operator carries a feature-change *and* a **permutation of skeleton positions** — the symmetric group $S_k$
+beside $\mathbb F_2^n$ — detected alignment-free by same-multiset/different-order skeletons and measured by
+permutation distance (transpositions, cycle type, inversion count). The research question is explicitly
+**mathematical**, on two axes:
+- **Intra-language.** Within a single system, what is the mathematical structure of its metatheses? Which
+  positions permute, with what cycle types; are the permutations a restricted, recurrent set (a sub-structure of
+  $S_k$) rather than arbitrary reorderings; do they compose; is there an algebra of a language's own metathesis?
+- **Cross-language.** Compared across the relevant related/contact systems, do metathesis permutation patterns
+  recur, mirror, or diverge — the specular inversion (TR↔RT) the consonantal-skeleton view was built to catch —
+  and does the *permutation* signal carry system/areal information that the feature-change signal does not?
+
+In short: a **mathematical investigation of metathesis** in its own right — its group-theoretic structure within
+a language and its comparison across languages — as a second, order-valued dimension of the operator algebra.
 
 ### W8 — The historical-holdout protocol
 Formalize discovery → stability → **blind** system discovery → external contrast (paper §6; manual Ch.20) and run
