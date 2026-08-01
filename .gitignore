@@ -13,8 +13,8 @@ docs/manual/*.tex
 !docs/*fig*.tex
 !docs/manual/*fig*.tex
 
-# Scratch / temp working files
-data/db/_*.tsv
+# Scratch / temp working files (underscore-prefixed); committed results live in data/results/*.csv
+data/db/_*
 
 # OS
 .DS_Store
