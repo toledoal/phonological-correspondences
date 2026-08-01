@@ -72,8 +72,9 @@ about *diagnosis*, not a licence to treat every outcome as success.
 - **Estimation:** replace the support bootstrap with a **language-level** bootstrap/jackknife (valid for a
   U-statistic over non-independent pairs); report BCa intervals; add **FDR** control across the nulls × families
   × measures grid; raise simulation count so $p_{MC}$ is informative.
-- **Sensitivity:** sweep support thresholds, the LexStat threshold, and the feature set; show headline signs are
-  invariant. Document the exact **12-feature** subselection (or move to a standard panphon set).
+- **Sensitivity:** support threshold, weight cap, and feature subset swept (DONE, `make sensitivity`): headlines
+  invariant (C(O), rank, occupancy stable well above the null across all three). LexStat-threshold and aligner
+  sweeps (need corpora) still scheduled. Document the exact **12-feature** subselection (or move to a standard panphon set).
 - **Ternary rigour:** define $\Delta$ as the indicator vector (drop the ill-typed "$=\phi\oplus\phi$"); recompute
   the invariants under the **typed-space** model of manual Ch.13 and show stability.
 - **Bias disclosure:** quantify the weight-$\le3$ cap's effect on $C(O),\tau,\kappa,E$; scope "basis-independent"

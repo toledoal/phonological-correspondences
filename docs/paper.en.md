@@ -6,6 +6,8 @@
 
 **Preprint · pilot study · 31 July 2026 · License: CC BY 4.0**
 
+**Repository (code, data, and PDFs):** https://github.com/toledoal/phonological-correspondences
+
 *Companion manual:* "Additive Structure of Phonological Correspondences: A Manual" (DOI: pending). *Code &
 reproducible pipeline:* https://github.com/toledoal/phonological-correspondences (clone to reproduce; Zenodo DOI: pending).
 
@@ -254,6 +256,19 @@ information between operator and branch is modest but non-zero and larger in AN 
 normalized), consistent with §4.5; a few operators dominate each family (effective count $N_{\mathrm{eff}}=24$ of
 119 IE, $18$ of 63 AN — where 119/63 are the *instance-level* type inventories before the support threshold that
 defines the repertoire $O$ of 67/22, distinct again from the branch-union $O_F$ of 97/48 in §4.5).
+
+### 4.7 Sensitivity: the headlines are measurement-invariant
+
+The paper flags transcription, segmentation, the feature matrix, and the thresholds as *measurement instruments*
+(§1, §3); a sensitivity sweep confirms the headline signs do not depend on them. Sweeping the **support
+threshold** (15–60), IE's rank stays 12 and $C(O)$ stays $0.215$–$0.224$ (AN: rank 10–12, $C(O)$ $0.17$–$0.23$);
+sweeping the **operator weight cap** ($\le2,3,4$) and the **feature subset** (the full 12, minus `lab`, minus
+`{round,lo}`, and a manner+voice+place 8-set) leaves $C(O)$ in $0.21$–$0.37$ (IE) and $0.14$–$0.28$ (AN) — in
+every case **well above the size-matched null floor** ($\approx0.12$–$0.15$, §4.2). Occupancy $\rho_{\rm opp}$
+stays $0.5$–$0.7$ (IE) and $\sim0.4$–$0.5$ (AN) across thresholds. The one soft spot, reported honestly, is
+Austronesian at weight cap $\le2$ ($C(O)=0.14$, $|O|=12$), where the repertoire is simply too small to resolve.
+Reproducible: `make sensitivity FAMILY="X"`. (The LexStat-threshold and aligner sweeps, which require the corpora,
+are scheduled.)
 
 ## 5. Figures
 

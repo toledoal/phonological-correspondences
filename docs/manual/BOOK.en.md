@@ -6,6 +6,8 @@
 
 **Technical report / manual · pilot study · 31 July 2026 · License: CC BY 4.0**
 
+**Repository (code, data, and PDFs):** https://github.com/toledoal/phonological-correspondences
+
 *Companion paper:* "Additive Structure of Phonological Correspondences: A protoform-agnostic method…" (DOI:
 pending). *Code & reproducible pipeline:* https://github.com/toledoal/phonological-correspondences (clone to reproduce; Zenodo DOI: pending).
 
@@ -1014,7 +1016,16 @@ The genealogical signal, where it exists, is **distributional** (Chapter 14), no
 structure survives size-matched random draws (Chapter 10) but not the concept-permutation artifact at the type
 level (Chapter 17) — both statements are true and must travel together.
 
-**Reproduce.** `make regimes` (concept permutation); `make superposition … TF_NULLBRANCH=3` (grouping).
+**Sensitivity — do the headlines depend on our knobs?** No. Sweeping the support threshold (15–60), the operator
+weight cap ($\le2,3,4$), and the feature subset (the full 12, minus `lab`, minus `{round,lo}`, an 8-feature
+manner+voice+place set), the repertoire size $|O|$ and the rank vary *smoothly*, but $C(O)$ and the occupancy
+$\rho_{\rm opp}$ stay clearly above the null floor throughout — $C(O)\in0.21$–$0.37$ (IE) and $0.14$–$0.28$ (AN),
+against a null of $\approx0.12$–$0.15$. The one honest soft spot is Austronesian at weight cap $\le2$
+($C(O)=0.14$, only 12 operators), too small to resolve. So the headline signs are properties of the data, not of
+where we set a dial. *(The cognacy-threshold and aligner sweeps, which need the corpora, are scheduled.)*
+
+**Reproduce.** `make sensitivity FAMILY="X"`; `make regimes` (concept permutation); `make superposition …
+TF_NULLBRANCH=3` (grouping).
 
 ## 17. Four corpus regimes: $D_G, D_L, D_C, D_R$
 
@@ -1199,6 +1210,7 @@ a blind test*, never by being assumed.
 | `make superposition FAMILY="X"` | 15 | branch decomposition, grouping null (+ `TF_RAREFY`, `TF_NULLBRANCH`) |
 | `make cognate-eval` | 5 | LexStat vs expert cognacy (pair- and type-level) |
 | `make regimes` | 17 | four corpus regimes $D_G/D_L/D_C/D_R$ + loans |
+| `make sensitivity FAMILY="X"` | 16 | sweep support threshold, weight cap, feature subset (invariance) |
 | `make chains FAMILY="X"` | — | preferred change corridors (monotone dimensions) |
 
 ## Appendix C — Reproducibility
