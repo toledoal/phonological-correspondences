@@ -195,8 +195,9 @@ structure and each sampled to size $|O|$; we report $Z$ and empirical $p_{\mathr
 | realizable $U_S$ | +9.2 | +7.3 |
 | **opportunity $\Omega_D$** | **+6.3** | **+5.9** |
 
-All six survive at $p_{\mathrm{MC}}\le0.004$ (500 simulations, the resolution floor; a larger $B$ and FDR control
-across the null $\times$ family $\times$ statistic grid are scheduled — see the research programme). We describe
+All six survive at $p_{\mathrm{MC}}\le0.004$ (500 simulations); since every $p_{\mathrm{MC}}$ sits at the
+resolution floor, a Benjamini–Hochberg correction across the null $\times$ family $\times$ statistic grid leaves
+them all significant. (A larger $B$ for finer $p$-values is deferred to the research programme.) We describe
 the six as "increasingly constrained" rather than a strict nesting: the span null (row 3) samples a different
 ambient set than the others, so the $Z$ column is not monotone. Even drawn from exactly the differences the
 corpus made available, the observed repertoire is significantly more composition-closed. Three further additive
@@ -216,7 +217,9 @@ the valid resampling unit is the **language**: we resample languages with replac
 pipeline ($B=40$). The result separates the two families sharply — $C(O)$ CI$_{95}=[0.18,0.22]$ for IE (tight,
 comfortably above the null) but $[0.15,0.30]$ for AN (wide, lower end near the null). **IE's additive structure
 is robust to which languages are sampled; Austronesian's is fragile** — a caution the size-matched nulls did not
-surface, and a reminder that with a small, variable repertoire the per-family sample matters.
+surface, and a reminder that with a small, variable repertoire the per-family sample matters. (The language
+bootstrap was run for $C(O)$; the companion statistics $\tau,\kappa,E$ rest on the size-matched $\Omega_D$ null,
+and their language-level resampling is deferred.)
 
 ### 4.3 What the additive structure is — and is not
 
@@ -337,8 +340,10 @@ does not yield a "metathesis operator" but surfaces as spurious substitutions an
 alignment-cost cohesion screen, but a genuine gap). Metathesis is properly a *permutation* of skeleton positions,
 an operator on order rather than on the features of a slot — an orthogonal dimension (the symmetric group $S_k$
 beside the feature space $\mathbb F_2^n$) that a future model should add explicitly (see the research programme).
-Force-directed figures lack an articulatory coordinate system. None of these affect the null-controlled results,
-but they bound their interpretation.
+The weight-$\le3$ operator cap excludes, by construction, compositions of weight $>3$ from $O$ while retaining
+them in the $C(O)$ denominator, deflating $C(O)$ somewhat; the sensitivity sweep (§4.7) shows the sign is
+invariant to the cap. Force-directed figures lack an articulatory coordinate system. None of these affect the
+null-controlled results, but they bound their interpretation.
 
 **Reproducibility.** All results run from `transformations/src` against a repertoire built by
 `make family FAMILY="X"`. Key targets: `make universes` (§4.1), `make nulls` / `make additive` (§4.2, §4.4),
@@ -346,6 +351,31 @@ but they bound their interpretation.
 Datasets: Lexibank, IE-CoR, Glottolog (cached classification). LexStat threshold 0.55, 100-run scorer; panphon
 12-feature primary set; seeds fixed. The companion **manual** (`docs/manual`) gives worked, hand-computed
 examples of every measure and the full derivations.
+
+## 8. Scope and future work
+
+This paper is a **bounded pilot**. Its claim is deliberately narrow: on two documented families, the empirical
+repertoire of feature-difference operators occupies a sparse-in-the-algebra but dense-in-opportunity,
+additively-structured region, and that structure is representational rather than (at the type level)
+genealogical — established with explicit null models, sensitivity sweeps, a representation control, a two-level
+cognacy validation, and a language-level robustness check. We claim no more than that, and we mark where even
+this is fragile (Austronesian's additive result).
+
+Everything else belongs to the **research programme** (`docs/RESEARCH-PROGRAM.md`), not to this paper, and is
+explicitly out of scope here:
+- **Inferential comparison across families** — moving from $n=2$ to 20–50 families (W1).
+- **Where sound laws live** — the directed, context-conditioned tensor and MDL-emergent rules (W2).
+- **The genealogical signal in distributions**, and family-blind typology (W3, W6).
+- **Contact and time** — loans-as-system-influence via WOLD; documented-date dynamics (W4, W5).
+- **Deeper mathematics** — affineness tests, matroid/circuit and coding-theoretic invariants cross-family,
+  persistent topology and spectra, and the **order/permutation dimension of metathesis** ($S_k$ beside
+  $\mathbb F_2^n$) (W7).
+- **Representation upgrades** — the typed (ternary) feature space; an external, non-corpus opportunity universe;
+  Austronesian gold cognacy (ABVD); LexStat-threshold and aligner sweeps; BCa/jackknife intervals and
+  language-level resampling of $\tau,\kappa,E$.
+
+Drawing this boundary is the point: the object and the method introduced here are meant to *open* those studies,
+each its own paper, not to pre-empt them.
 
 ## References
 
