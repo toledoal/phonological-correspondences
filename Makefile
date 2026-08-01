@@ -40,6 +40,8 @@ independent-omega:                           ## alignment-free opportunity (boun
 	cd src && TF_FAMILY="$(FAMILY)" ../$(VENV) independent_omega.py
 bootstrap-lang:                              ## language-level bootstrap of C(O) (valid unit; needs corpora, slow)
 	cd src && TF_FAMILY="$(FAMILY)" ../$(VENV) bootstrap_lang.py
+harvest-bootstrap:                           ## persist a bootstrap run to data/results/*.csv + transf.db
+	cd src && TF_FAMILY="$(FAMILY)" ../$(VENV) harvest_bootstrap.py
 cognate-eval:                                ## LexStat vs IE-CoR expert cognacy (needs iecor)
 	cd src && ../$(VENV) cognate_eval.py
 regimes:                                     ## four corpus regimes D_G/D_L/D_C/D_R (needs iecor)
