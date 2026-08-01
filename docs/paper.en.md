@@ -27,7 +27,9 @@ externally imposed sound classes**. (We say *protoform-agnostic* rather than "re
 still detected statistically with LexStat, which is itself a correspondence-based inference — see §3.) We study
 the geometry and additive structure of $O$ for Indo-European (IE) and Austronesian (AN), drawn from Lexibank via
 statistical cognacy (LexStat) and feature-distance alignment (panphon). Four results. (i) **Occupancy is not sparsity of the languages but vastness
-of the space:** of the differences the corpus actually makes available, IE realizes 63% and AN 48%. (ii) The
+of the space:** against $\approx1.6\%$ of the algebraic span, the repertoire fills a large fraction of what is
+actually *available* — $0.29$–$0.63$ (IE) and $0.27$–$0.48$ (AN) depending on whether availability is measured
+alignment-independently or from the aligner — an order of magnitude denser than the span, not sparse. (ii) The
 repertoire is **additively organized** — combining two operators lands back in $O$ far more often than chance,
 and this survives a hierarchy of six nested null models up to and including sampling from the corpus's own
 opportunity set ($Z=+6.3$ IE, $+5.9$ AN; $p_{\mathrm{MC}}\le0.004$). (iii) That additive structure is a property
@@ -158,21 +160,28 @@ between $O$ and $\langle O\rangle$ are the **realizable** universe $U_S=\{\Delta
 attested segment inventory $S$) and the **opportunity** universe $\Omega_D$ (differences that actually occur in
 aligned corpus positions):
 
-| family | $\rho_{\mathrm{alg}}$ (vs span) | $\rho_{\mathrm{seg}}$ (vs realizable) | $\rho_{\mathrm{opp}}$ (vs opportunity) |
-|---|---|---|---|
-| Indo-European | 0.016 | 0.48 | **0.63** |
-| Austronesian | 0.022 | 0.43 | **0.48** |
+| family | $\rho_{\mathrm{alg}}$ (span) | $\rho_{\mathrm{seg}}$ (realizable $U_S$) | $\rho_{\mathrm{opp}}$ (aligner $\Omega_D$) | $\rho_{\mathrm{ind}}$ (alignment-free) |
+|---|---|---|---|---|
+| Indo-European | 0.016 | 0.48 | 0.63 | **0.29** |
+| Austronesian | 0.022 | 0.43 | 0.48 | **0.27** |
 
 where $\rho_{\mathrm{alg}}=\lvert O\rvert/(2^r-1)$, $\rho_{\mathrm{seg}}=\lvert O\rvert/\lvert U_S\cap\langle
-O\rangle\rvert$, and $\rho_{\mathrm{opp}}=\lvert O\rvert/\lvert\Omega_D\cap\langle O\rangle\rvert$. Of what was
-actually available, the repertoire is *dense*, not sparse: the "98% unused" is the algebraic space being
-enormous, not languages being restrictive.
+O\rangle\rvert$, and $\rho_{\mathrm{opp}}=\lvert O\rvert/\lvert\Omega_D\cap\langle O\rangle\rvert$. Because
+$\Omega_D$ is built from our *own* alignments, $\rho_{\mathrm{opp}}$ could be circular; we therefore add an
+**alignment-free** opportunity $\Omega_{\mathrm{bag}}$ (differences between consonants co-present in same-concept
+words, no alignment used) giving $\rho_{\mathrm{ind}}$. The aligner did inflate the figure — $\rho_{\mathrm{ind}}$
+is roughly half of $\rho_{\mathrm{opp}}$ — but the conclusion holds under a denominator that never touches our
+aligner: at $0.27$–$0.29$ (and $\rho_{\mathrm{seg}}\approx0.43$–$0.48$, also alignment-free) the repertoire is an
+order of magnitude denser than the span. The "98% unused" is the algebraic space being enormous, not languages
+being restrictive.
 
 ### 4.2 The repertoire is additively organized
 
 Composing two operators is XOR of their feature-sets. The **composition-realization index**
 $$C(O)=\frac{|\{\{u,v\}\subseteq O:u\oplus v\in O\}|}{\binom{|O|}{2}}$$
-is $0.220$ (IE) and $0.234$ (AN); conditioned on the opportunity universe, $C_\Omega(O)=0.81$ (IE), $0.66$ (AN).
+is $0.220$ (IE) and $0.234$ (AN); conditioned on the opportunity universe, $C_\Omega(O)=0.81$ (IE), $0.66$ (AN),
+and conditioned on the **alignment-free** opportunity $\Omega_{\mathrm{bag}}$ (§4.1) it remains substantial at
+$0.57$ (IE), $0.48$ (AN) — the composition-closure is not an aligner artifact.
 To test whether this exceeds chance we compare against a hierarchy of null repertoires, each preserving more
 structure and each sampled to size $|O|$; we report $Z$ and empirical $p_{\mathrm{MC}}$ over 500 simulations:
 
@@ -314,8 +323,14 @@ test — is a template for leakage-free evaluation of language models on histori
 **Limitations.** Two families are a pilot; "family" is a genealogical label taken as a boundary, not a result.
 The opportunity universe $\Omega_D$ and the additive nulls depend on the corpus and aligner. The additive
 structure is type-level and representational; loans-as-system-influence could not be tested (loan annotations are
-absent in the pilot corpora and require a resource such as WOLD). Force-directed figures lack an articulatory
-coordinate system. None of these affect the null-controlled results, but they bound their interpretation.
+absent in the pilot corpora and require a resource such as WOLD). **Metathesis** — a *reordering* of segments,
+as in the classic TR↔RT — is not captured: the alignment is monotonic (order-preserving), so a metathesized pair
+does not yield a "metathesis operator" but surfaces as spurious substitutions and gaps (largely filtered by the
+alignment-cost cohesion screen, but a genuine gap). Metathesis is properly a *permutation* of skeleton positions,
+an operator on order rather than on the features of a slot — an orthogonal dimension (the symmetric group $S_k$
+beside the feature space $\mathbb F_2^n$) that a future model should add explicitly (see the research programme).
+Force-directed figures lack an articulatory coordinate system. None of these affect the null-controlled results,
+but they bound their interpretation.
 
 **Reproducibility.** All results run from `transformations/src` against a repertoire built by
 `make family FAMILY="X"`. Key targets: `make universes` (§4.1), `make nulls` / `make additive` (§4.2, §4.4),

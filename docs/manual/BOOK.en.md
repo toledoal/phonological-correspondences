@@ -435,6 +435,16 @@ Column 1 gives `t~d` = `{voi}` (our familiar atom); column 3 gives a vowel corre
 is again a gap. Every aligned, non-identical, non-gap column is one operator instance. Run this over all coderivative
 pairs and you have counted the whole repertoire — mechanically, with no reconstruction anywhere.
 
+**One thing this alignment cannot see: metathesis.** Needleman–Wunsch is *monotonic* — it keeps order — so when
+two forms differ by a **reordering** of segments (the classic TR↔RT, or *ask*↔*aks*), it cannot represent that as
+a single move. It will instead fake it with substitutions and gaps, injecting noise. Such pairs align *badly*
+(high cost), so the cohesion screen filters the worst cases; but partial metathesis leaks. This is not a small
+patch to make — metathesis is a **permutation of the skeleton's positions**, a different *kind* of operator: it
+lives in the group of reorderings ($S_k$), orthogonal to the feature space $\mathbb F_2^n$ where our operators
+live. Treating it as a first-class, second dimension of change (feature-change *and* position-permutation) is a
+natural and important extension — it is exactly the mirror-inversion the skeleton view was built to catch — and
+we flag it as such rather than hide it inside the noise. (See the research programme.)
+
 **Reproduce.** `make family FAMILY="Indo-European"` runs steps 1–4 and writes the correspondence table;
 `make cognate-eval` runs the validation against IE-CoR.
 
@@ -724,14 +734,19 @@ $$\rho_{\text{alg}}=\frac{|O|}{2^r-1},\quad
 
 **The result.**
 
-| | $\rho_{\text{alg}}$ | $\rho_{\text{seg}}$ | $\rho_{\text{opp}}$ |
-|---|---|---|---|
-| Indo-European | 0.016 | 0.48 | **0.63** |
-| Austronesian | 0.022 | 0.43 | **0.48** |
+| | $\rho_{\text{alg}}$ (span) | $\rho_{\text{seg}}$ (inventory) | $\rho_{\text{opp}}$ (aligner) | $\rho_{\text{ind}}$ (alignment-free) |
+|---|---|---|---|---|
+| Indo-European | 0.016 | 0.48 | 0.63 | **0.29** |
+| Austronesian | 0.022 | 0.43 | 0.48 | **0.27** |
 
-Of what the corpus made available, **Indo-European uses 63% and Austronesian 48%**. The "98% unused" was almost
-entirely the *algebraic* abstraction being enormous — not languages being restrictive. The repertoire is, in the
-only sense that matters phonologically, fairly **dense**.
+The "98% unused" was almost entirely the *algebraic* abstraction being enormous — not languages being
+restrictive. One honest wrinkle: $\rho_{\text{opp}}$ uses $\Omega_D$, which we built from our *own* alignments, so
+it could flatter itself. We therefore add $\rho_{\text{ind}}$, measured against an **alignment-free** opportunity
+$\Omega_{\text{bag}}$ (differences between consonants merely *co-present* in same-concept words). The aligner did
+inflate the number — $\rho_{\text{ind}}$ is about half of $\rho_{\text{opp}}$ — but the conclusion survives a
+denominator that never uses our aligner: at $0.27$–$0.29$ (and $\rho_{\text{seg}}\approx0.43$–$0.48$, also
+alignment-free) the repertoire is an order of magnitude denser than the span. Dense, not sparse. (`make
+independent-omega FAMILY="X"`.)
 
 **Limit.** $\Omega_D$ depends on the corpus and the aligner; it is an *opportunity* estimate, not a
 phonological law. But it is far closer to the phenomenal reality than $2^r-1$, and the three numbers *together*
@@ -748,7 +763,9 @@ another *observed* operator? Is the repertoire *additively organized*, or just a
 $$C(O)=\frac{|\{\{u,v\}\subseteq O : u\oplus v\in O\}|}{\binom{|O|}{2}}$$
 (for $u\neq v$ in $\mathbb F_2$, $u\oplus v\neq\varnothing$ automatically, so the denominator is just
 $\binom{|O|}{2}$). Observed: **IE 0.220, AN 0.234**. Conditioned on realizability, $C_\Omega(O)$ asks: *of the
-compositions that land in the opportunity universe, how many are observed?* — **IE 0.81, AN 0.66**.
+compositions that land in the opportunity universe, how many are observed?* — **IE 0.81, AN 0.66** (aligner
+$\Omega_D$), and **IE 0.57, AN 0.48** against the alignment-free $\Omega_{\text{bag}}$ (Chapter 9) — so the
+composition-closure survives a denominator that does not use our aligner.
 
 **A worked composition.** `b~p` $=\{voi\}$ and `p~f` $=\{cont+strid\}$ compose to
 $\{voi+cont+strid\}$; the pair `b~f`, when it occurs, necessarily carries that signature — the algebra *predicts*

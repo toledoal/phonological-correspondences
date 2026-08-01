@@ -1,4 +1,4 @@
-# Additive Structure of Phonological Correspondences — reproducible pipeline
+# Additive Structure of Phonological Correspondences â reproducible pipeline
 # Usage: make <target> FAMILY="Indo-European"   (or FAMILY="Austronesian")
 VENV=./.venv/bin/python
 FAMILY?=Indo-European
@@ -8,7 +8,7 @@ FAMILY?=Indo-European
 help:                                        ## list targets
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-14s\033[0m %s\n",$$1,$$2}'
 
-venv:                                        ## create venv and install deps (panphon, lingpy, networkx, …)
+venv:                                        ## create venv and install deps (panphon, lingpy, networkx, â¦)
 	python3.12 -m venv .venv && ./.venv/bin/pip install -q -r requirements.txt
 
 # ---- analyses on the bundled repertoire data/db/transf.db (no corpora needed) ----
@@ -36,6 +36,8 @@ superposition:                               ## branch decomposition + grouping 
 	cd src && TF_FAMILY="$(FAMILY)" ../$(VENV) branch_algebra.py
 distributions:                               ## P_L(o), entropy, N_eff, mutual information (needs corpora)
 	cd src && TF_FAMILY="$(FAMILY)" ../$(VENV) distributions.py
+independent-omega:                           ## alignment-free opportunity (bounds Ω_D circularity; needs corpora)
+	cd src && TF_FAMILY="$(FAMILY)" ../$(VENV) independent_omega.py
 cognate-eval:                                ## LexStat vs IE-CoR expert cognacy (needs iecor)
 	cd src && ../$(VENV) cognate_eval.py
 regimes:                                     ## four corpus regimes D_G/D_L/D_C/D_R (needs iecor)

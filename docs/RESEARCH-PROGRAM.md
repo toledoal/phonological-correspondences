@@ -128,6 +128,12 @@ Take the additive-combinatorics / matroid / coding-theory framing from metaphor 
 about cross-family dependency structure (same dependencies under different feature names)? **Persistent topology**
 of the composition complex ($u\oplus v=w$ triangles across a frequency threshold); **spectral** signatures of
 $G_S/G_O$. Question: *which mathematical objects are the right invariants of a phonological system?*
+A concrete sub-item: **the order/permutation dimension (metathesis).** Present operators live in feature space
+$\mathbb F_2^n$ at aligned slots; a monotonic aligner cannot represent a *reordering* of segments (TR↔RT), so
+metathesis is currently mis-scored as substitutions+gaps. Add it as a first-class second dimension — an operator
+carries a feature-change *and* a permutation of skeleton positions (the symmetric group $S_k$ beside
+$\mathbb F_2^n$) — detected alignment-free by same-multiset/different-order skeletons, and measured by permutation
+distance. This is the mirror-inversion the consonantal-skeleton view was designed to catch.
 
 ### W8 — The historical-holdout protocol
 Formalize discovery → stability → **blind** system discovery → external contrast (paper §6; manual Ch.20) and run
