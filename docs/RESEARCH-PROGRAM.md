@@ -126,7 +126,12 @@ Take the additive-combinatorics / matroid / coding-theory framing from metaphor 
 about cross-family dependency structure (same dependencies under different feature names)? **Persistent topology**
 of the composition complex ($u\oplus v=w$ triangles across a frequency threshold); **spectral** signatures of
 $G_S/G_O$. Question: *which mathematical objects are the right invariants of a phonological system?*
-**A dedicated future line — the mathematics of metathesis.** Present operators live in feature space
+**A dedicated future line — the mathematics of metathesis (now its own Paper 3; skeleton at
+`docs/paper3-metathesis.en.md`).** Central design question: the mathematical object/event for a metathesis —
+candidates are a permutation $\pi\in S_k$ (object) acting on the skeleton (event); the honest operator
+$(\pi,\Delta)\in S_k\times\mathbb F_2^n$ (reorder *and* change features); magnitude via rearrangement distance
+(genome-rearrangement math, handling *murciélago*-type adjacent swaps and *cocodrilo*-type long moves alike).
+Present operators live in feature space
 $\mathbb F_2^n$ at aligned slots; a monotonic aligner cannot represent a *reordering* of segments (TR↔RT), so
 metathesis is currently mis-scored as substitutions+gaps. It should become a first-class second dimension: an
 operator carries a feature-change *and* a **permutation of skeleton positions** — the symmetric group $S_k$
