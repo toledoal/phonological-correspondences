@@ -187,3 +187,95 @@ A shared, reproducible pipeline (already public); a growing atlas of family repe
 set of invariants and null models; and a validation protocol (W8) that any newcomer can run. The measure of
 success is not a single result but whether **others can pose and answer new questions in these terms** — about
 any language system, without first committing to a reconstruction.
+
+---
+
+## Annex A — Where the genealogical signal lives
+
+*This annex records a precise reading of the pilot's central negative result and turns it into a map for
+Workstreams 2–3. The claim is easy to misstate, so we state it carefully.*
+
+**The precise claim is not that genealogy is absent from phonology.** It is narrower:
+
+> Genealogy does not appear clearly in the flat *inventory of difference-types*, nor in their additive closure.
+
+Knowing that a family uses the operators $\{voi\}$, $\{cont\}$, $\{cont{+}strid\}$ does not identify its history,
+because those same difference-types can arise from articulatory anatomy, from segment inventories, and from the
+feature representation. Even after destroying the coderivative relation by permuting concepts ($D_R$), the basic
+additive structure remains. The genealogical signal lives at a more structured level — **not in *which*
+transformations are possible, but in *how they are systematically distributed* across languages, words,
+positions, and contexts.** Concretely, it resides in:
+
+1. **Regular correspondence between concrete languages.** The abstract operator $\Delta(t,d)=\{voi\}$ is general
+   phonology; it recurs in unrelated languages. A genealogical fact is not "the difference $t\sim d$ exists" but
+   "in a specific set of coderivatives, $t$ in language A corresponds *recurrently* to $d$ in language B, in
+   certain positions and contexts." The unit is not $o$ but the tuple $(\ell_i,\ell_j,o,c,p,w)$: language pair,
+   operator, context, position, weight. The isolated operator is phonology; the **systematic correspondence
+   matrix between determinate languages** is history.
+
+2. **Distribution, not mere existence.** Two families can both use $\{voi\}$ yet differ entirely in *where* — one
+   among stops, word-initially, in a few concepts; the other among fricatives, intervocalically, pervasively.
+   The type is identical; the distribution $P_{ij}(o)$ is not. The pilot's mutual information between operator
+   and branch is small but non-zero (IE 0.14, AN 0.22): knowing the branch reduces uncertainty about which
+   operators occur. The signal is in the **frequencies and associations**, not the flat catalogue.
+
+3. **Bundles of correspondences.** A historical law is rarely a lone operator. "Grimm" is a *coordinated bundle*
+   over several consonant series, a specific community of languages, certain contexts, a direction. The aggregate
+   repertoire flattens this; pooling all IE languages loses which operators are shared specifically by, say,
+   Germanic and Italic. Genealogy should surface when a model discovers *jointly* a **set of languages + a bundle
+   of operators + recurrent contexts** — precisely the tensor $X_{ijo}$, then $X_{ijoc}$, and its factorization
+   (W2).
+
+4. **Direction.** The operator is symmetric, $\Delta(t,s)=\Delta(s,t)$, but history is not: $t\to s \neq s\to t$.
+   The current repertoire is an **unoriented shadow of history** — it keeps the *shape* of differences and erases
+   the *arrow of time*. The directed object $T=(a,b,c,p,\ell_1,\ell_2,w)$ with $T_{t\to s}\neq T_{s\to t}$
+   restores it (W2).
+
+5. **Phonological context.** A regular correspondence $s\sim r$ may be $s\to z\to r$ under conditions; the final
+   $s\sim r$ hides the route. Without context, different histories yield the same operator, so the law is a
+   *conditional* distribution $P(o\mid c,\ell_i,\ell_j)$ (W2, order-2).
+
+6. **Morphology.** Correspondences that recur in paradigms, declensions, and morpheme boundaries carry
+   continuity more sharply than the abstract operator: an alternation confined to a nominal plural or an
+   inherited verbal ending is far less likely to be shared by chance than a free-floating segment difference.
+   Traditional genealogy leans on phonology *and* lexicon *and* morphology *and* grammar together.
+
+7. **Which words participate.** $\{voi\}$ occurs in thousands of non-historical comparisons; its historical value
+   rises when it recurs in the *same* lexical families — numerals, kinship, body parts, basic verbs, pronouns,
+   grammatical morphemes. Genealogy lives in the association
+   $\text{form}\leftrightarrow\text{meaning}\leftrightarrow\text{systematic correspondence}$. The
+   concept-permutation control shows the *general* additive structure survives without semantics, but the
+   *concrete* genealogy cannot be reconstructed without knowing which forms belong to which lexical sets.
+
+8. **Emergence from joint structure.** There is no isolated property called "genealogy" inside a phoneme.
+   Genealogy is an **emergent property of the systematic covariation of many dimensions** —
+   $\text{relational phonology} + \text{lexicon} + \text{morphology} + \text{context} + \text{direction} +
+   \text{distribution} + \text{time}$. The genetics analogy is exact: a single base or a single mutation reveals
+   no parentage; a *distributed pattern* of thousands of variants does. An isolated operator is a possible
+   mutation; a matrix of recurrent, shared, bundled correspondences is descent (and contact, and divergence).
+
+9. **Genealogy vs typology.** Natural transformations (voicing, fricativization, nasalization, palatalization)
+   are reusable by any language — that is *typological* signal. What is *genealogical* is the **particular
+   configuration of their reuse**: systematic correspondences over concrete word-sets, multiple coordinated
+   transformations, shared morphology, shared irregularities, distributions consistent with a history of
+   divergence.
+
+10. **The branch case, read correctly.** In IE, branch type-repertoires overlap no more than random groupings —
+    the basic types are set by the shared inventory. In AN they *are* more differentiated than chance (more
+    distinct inventories/packages per branch). But IE's null-at-the-type-level does **not** mean no genealogy;
+    it means genealogy must be sought in the more informative space — edge weights, distributions, pairwise
+    correspondences, contexts, direction, lexical series.
+
+**A useful reformulation.** The *repertoire* asks: *what classes of difference does this set of languages use?*
+— which yields $O$. *Genealogy* asks: *which language corresponds systematically with which, via what
+differences, in what words, positions, contexts, and directions?* — which needs $X_{ijoc}$ and, ultimately, a
+temporal dimension. So it is wrong to say genealogy "comes from somewhere other than phonology"; rather:
+
+> Genealogy comes from the historical organization of phonology into a network of **conditioned**
+> correspondences, not from the abstract inventory of possible transformations.
+
+$$\boxed{\text{Phonology provides the operations; genealogy is in their pattern of distribution.}}$$
+
+This is exactly why the pilot's honest "representational, not (type-level) genealogical" result is a *doorway*,
+not a dead end: it says the genealogical signal is real but lives one level up, in the distributed, directed,
+context- and lexicon-conditioned network — the object Workstreams 2 and 3 are built to measure.
