@@ -161,6 +161,44 @@ Kept out of discovery on principle. The only admissible use is as an **external 
 groupings compatible with OAS (or with reconstructions)?* Recovery is independent evidence; non-recovery lets the
 external scheme be revised without circularity. **OAS is not used as a coordinate anywhere in W0–W9.**
 
+## 4b. The wider programme — a general mathematics of linguistic systems
+
+Everything above is framed around *phonological correspondences* because that is where the pilot began. But the
+method is not specific to sound change. Its core move is domain-general:
+
+> Represent a linguistic relation or unit as a **difference / feature vector** in a representable space; study the
+> **geometry and additive/algebraic structure** of the **observed repertoire** against **explicit null models**,
+> including the **generable-but-unattested** region — and keep the theory you later want to test *out* of the
+> computation.
+
+Read that way, phonological correspondence is **domain 1 of many**. The same object (repertoire $O$, span
+$\langle O\rangle$, occupancy, additive index $C(O)$, holes $\langle O\rangle\setminus O$, distributions
+$P(o\mid\cdots)$, matroid/rank invariants, directed layer $T$) transfers to other levels of language, each with
+its own representation and its own open data. This is the real reason to build the pilot carefully: it is a
+**template**, and mathematically analysing "much more about human language" is the point, not a side-effect.
+
+| domain | the unit / "operator" | the repertoire, and what its geometry asks | data resources |
+|---|---|---|---|
+| **Phonotactics / syllable structure** | licit sequence / template as a feature string | which templates a language occupies vs the generable-but-unattested (holes in sequence space); dependencies among positions | Lexibank segments, PHOIBLE |
+| **Phonological inventories** | segment as a feature vector | the geometry of an inventory; occupancy and gaps in feature space; cross-language inventory repertoires | PHOIBLE |
+| **Morphology / paradigms** | an alternation or morphological operation | the repertoire of a grammar's alternations (manual §6.1); paradigm geometry; which operations compose | UniMorph, paradigm datasets |
+| **Prosody / tone / stress** | a suprasegmental contrast | tone/stress-system repertoires; occupancy and gaps | tonal typology datasets |
+| **Lexical semantics / colexification** | a meaning link (which senses share a form) | the geometry of the colexification network; attested vs generable meaning-pairings; semantic "holes" | CLICS, Concepticon |
+| **Word-formation** | a derivation / compounding operator | the algebra of word-building; composition and holes | derivational corpora |
+| **Grammar / typology** | a typological feature-vector per language | occupancy of the type space; **dependencies among features = implicational universals** (Greenberg) as our *corank*; unattested type combinations as *holes* | WALS, Grambank |
+| **Variation & change over time** | a variant, dated | repertoire drift on documented time; the directed layer $T$ generalised | dated corpora, sociolinguistic data |
+| **Multimodal (sign, gesture)** | an articulatory-parameter difference | the same geometry in another modality | sign-language phonology datasets |
+
+Two things carry across every row: the **shared invariants** (rank, occupancy, composition/additivity, holes,
+distributional dependence) give a common vocabulary for comparing *different* subsystems; and the **discipline**
+(discover-then-contrast, explicit nulls, no imported theory) keeps each honest. The grammar/typology row is
+especially striking: **implicational universals are exactly the linear dependencies (corank) of a feature
+repertoire, and "impossible" language types are its holes** — the same objects this pilot measures for sound.
+
+Each row is a future programme in its own right (its own data, its own paper). The phonological-correspondence
+pilot's job is to prove the template works and to fix the method — so that "the mathematics of linguistic
+systems" becomes a portable research practice rather than a single study.
+
 ## 5. Phased roadmap
 
 | Phase | Focus | Workstreams | Main deliverable |
